@@ -1,0 +1,2551 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>5.1.3 to 6.0.0 Classic | Ext JS 6.0.0 </title>
+    <!--  Generated on August, 16 2019 at 15:0 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta property="og:image" content="../../../../../assets/images/sencha-200.png" />
+    <meta property="og:title" content="5.1.3 to 6.0.0 Classic | Ext JS 6.0.0 " />
+    <meta property="og:description" content="Ext JS Classic - API documentation from Sencha" />
+    <meta property="og:site_name" content="Sencha Documentation" />
+    <meta property="og:url" content="" />
+    <meta name="description" content="Ext JS Classic - API documentation from Sencha">
+    <link rel="stylesheet" type="text/css" href="../../../../../assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../assets/css/create-app-html-app.css">
+
+
+</head>
+<body class="new-docs  is-guide  has-guides   has-api tree-shown ">
+
+    <!-- SVG Sprite -->
+    <div style="height: 0; width: 0; position: absolute; visibility: hidden;" aria-hidden="true">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false">
+            <symbol id="ripply-scott" viewBox="0 0 100 100">
+                <circle id="ripple-shape" cx="1" cy="1" r="1" />
+            </symbol>
+        </svg>
+    </div>
+    <!-- /end sprite -->
+
+    <script type="text/javascript">
+        function getOS() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if(/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return 'ios';
+            } else if(userAgent.match(/Android/i)) {
+                return 'android';
+            }
+        }
+
+        var isIE8 = false;
+
+        document.body.className += ' ' + getOS();
+
+        window.DocsApp = window.DocsApp || {};
+        DocsApp.meta   = {"majorVer":"6","prodObj":{"3":{"link":"http://docs.sencha.com/{prod}/{ver}/#!/api/{page}"},"4":{"link":"http://docs.sencha.com/{prod}/{ver}/#!/api/{page}"},"title":"Ext JS","currentVersion":"7.0.0","toolkit":{"6":{"toolkits":["modern","classic"],"defaultToolkit":"modern"},"7":{"toolkits":["modern","classic"],"defaultToolkit":"modern"},"6.7.0-CE":{"toolkits":["modern"],"defaultToolkit":"modern"}},"productMenu":["7.0.0","6.7.0","6.7.0-CE","6.6.0-CE","6.6.0","6.5.3","6.5.2","6.5.1","6.5.0","6.2.1","6.2.0","6.0.2","6.0.1","6.0.0","5.1.4","5.1.3","5.1.2","5.1.1","5.1.0","5.0.1","5.0.0","4.2.6","4.1.3","4.0.7","3.4.0"],"guideSearchPartners":["cmd"],"hasVersions":true,"hasApi":true,"theme":{"5.0.0":"crisp","5.0.1":"crisp","5.1.0":"crisp","5.1.1":"crisp","5.1.2":"crisp","5.1.3":"crisp","5.1.4":"crisp","6.0.0":{"classic":"triton","modern":"triton"},"6.0.1":{"classic":"triton","modern":"triton"},"6.0.2":{"classic":"triton","modern":"triton"},"6.2.0":{"classic":"triton","modern":"triton"},"6.2.1":{"classic":"triton","modern":"triton"},"6.2.2":{"classic":"triton","modern":"triton"},"6.5.0":{"classic":"triton","modern":"material"},"6.5.1":{"classic":"triton","modern":"material"},"6.5.2":{"classic":"triton","modern":"material"},"6.5.3":{"classic":"triton","modern":"material"},"6.6.0":{"classic":"triton","modern":"material"},"6.6.0-CE":{"classic":"triton","modern":"material"},"6.7.0-CE":{"classic":"triton","modern":"material"},"6.7.0":{"classic":"triton","modern":"material"},"7.0.0":{"classic":"triton","modern":"material"}},"repo":"SDK","remoteUrl":"git@github.com:extjs/{repo}.git","addlRepos":["package-loader"],"addlRemoteUrls":"git@github.com:sencha/{repo}.git","remotes":{"7.0.0":{"branch":"ext-7.0.x"},"6.7.0":{"branch":"ext-6.7.x"},"6.7.0-CE":{"branch":"ext-6.6.x"},"6.6.0-CE":{"branch":"ext-6.6.x"},"6.6.0":{"branch":"ext-6.6.x"},"6.5.3":{"branch":"ext-6.5.x"},"6.5.2":{"branch":"ext-6.5.x"},"6.5.1":{"branch":"ext-6.5.1-docs"},"6.5.0":{"branch":"ext-6.5.0-docs"},"6.2.2":{"branch":"ext-6.2.x"},"6.2.1":{"branch":"ext-6.2.1-docs"},"6.2.0":{"branch":"ext-6.2.0-docs"},"6.0.2":{"branch":"ext-6.0.x"},"6.0.1":{"branch":"ext-6.0.1-docs"},"6.0.0":{"branch":"ext-6.0.0-docs"},"5.1.4":{"branch":"ext-5.1.x"},"5.1.3":{"branch":"ext-5.1.3-docs"},"5.1.2":{"branch":"ext-5.1.2-docs"},"5.1.1":{"branch":"ext-5.1.1-docs"},"5.1.0":{"branch":"ext-5.1.0-docs"},"5.0.1":{"branch":"ext-5.0.1-docs"},"5.0.0":{"branch":"ext-5.0.0-docs"}}},"hasApi":true,"hasVersions":true,"hasToolkits":2,"toolkits":["modern","classic"],"toolkit":"classic","hasGuides":true,"title":"Ext JS","version":"6.0.0","pageType":"guide","product":"extjs","apiProduct":"extjs","apiVersion":"6.0.0","exceptions":{"touch":["2.3.1","2.2.1","2.1.1","2.0.1"],"extjs":["3.4.0","4.0.7","4.1.3","4.2.6"]},"searchPartnerVersions":{"cmd":{"7.0.0":"7.0.0","6.7.0":"7.0.0","6.7.0-CE":"7.0.0","6.6.0-CE":"7.0.0","6.6.0":"7.0.0","6.5.3":"7.0.0","6.5.2":"7.0.0","6.5.1":"7.0.0","6.5.0":"6.5.0","6.2.1":"6.5.0","6.2.0":"6.5.0","6.0.2":"6.5.0","6.0.1":"6.5.0","6.0.0":"6.5.0","5.1.4":"6.5.0","5.1.3":"6.5.0","5.1.2":"6.5.0","5.1.1":"6.5.0","5.1.0":"6.5.0","5.0.1":"6.5.0","5.0.0":"6.5.0","4.2.6":"6.5.0","4.1.3":"6.5.0","4.0.7":"6.5.0","3.4.0":"6.5.0"}},"navTreeName":"Guides","myId":"whats_new/api_diffs/600_classic_diff","rootPath":"../../../","pageName":"5.1.3 to 6.0.0 Classic","docsRootPath":"../../../../../"};
+    </script>
+    <!--[if IE 8]>
+    <script type='text/javascript'>
+        isIE8 = true;
+    </script>
+    <![endif]-->
+    <script type="text/javascript">
+        if (!isIE8) {
+            document.write('<script type=\"text/javascript\" src=\"../../../../../assets/js/prism.js\"><\/script>');
+        }
+        if (DocsApp.meta.hasGuides) {
+            document.write('<script type=\"text/javascript\" src=\"../../../../../assets/js/extjs-6.0.0-guidesTree.js\"><\/script>');
+        }
+        if (DocsApp.meta.hasApi) {
+            document.write('<script type=\"text/javascript\" src=\"../../../../../assets/js/extjs-6.0.0-apiTree.js\"><\/script>');
+        }
+    </script>
+    <script type="text/javascript" src="../../../../../assets/js/ace.js"></script>
+    <script type="text/javascript" src="../../../../../assets/js/create-app-html-app.js"></script>
+    <script type="text/javascript" src="../../../../../assets/js/productMenu.js"></script>
+
+    <div id="help-wrap">
+        <div class="help-header">
+            Docs Help
+            <div id="help-close" class="icon-btn">
+                <i class="fa fa-close"></i>
+            </div>
+        </div>
+        <div class="classText">
+            <div class="toc classMeta">
+                <h2>Contents</h2>
+                <a class="toc-page-h2" href="#terms-icons-and-labels">Terms, Icons, and Labels</a>
+                <a class="toc-page-h3" href="#access-levels">Access Levels</a>
+                <a class="toc-page-h3" href="#member-types">Member Types</a>
+                <a class="toc-page-h3" href="#member-syntax">Member Syntax</a>
+                <a class="toc-page-h3" href="#member-flags">Member Flags</a>
+                <a class="toc-page-h3" href="#class-icons">Class Icons</a>
+                <a class="toc-page-h3" href="#member-icons">Member Icons</a>
+                <a class="toc-page-h2" href="#navigation-and-features">Navigation and Features</a>
+                <a class="toc-page-h3" href="#class-member-quick-nav-menu">Class Member Quick-Nav Menu</a>
+                <a class="toc-page-h3" href="#getter-and-setter-methods">Getter and Setter Methods</a>
+                <a class="toc-page-h3" href="#history-bar">History Bar</a>
+                <a class="toc-page-h3" href="#search-and-filters">Search and Filters</a>
+                <a class="toc-page-h3" href="#api-doc-class-metadata">API Doc Class Metadata</a>
+                <a class="toc-page-h3" href="#expanding-and-collapsing-examples-and-class-members">Expanding and Collapsing Examples and Class Members</a>
+                <a class="toc-page-h3" href="#desktop-vs-mobile-view">Desktop -vs- Mobile View</a>
+                <a class="toc-page-h3" href="#viewing-the-class-source">Viewing the Class Source</a>
+            </div>
+            <h2 id="terms-icons-and-labels">Terms, Icons, and Labels</h2>
+            <p>Many classes have shortcut names used when creating (instantiating) a class with a
+                configuration object.  The shortcut name is referred to as an <code>alias</code> (or <code>xtype</code> if the
+                class extends Ext.Component).  The alias/xtype is listed next to the class name of
+                applicable classes for quick reference.</p>
+            <h3 id="access-levels">Access Levels</h3>
+            <p>Framework classes or their members may be specified as <code>private</code> or <code>protected</code>.  Else,
+                the class / member is <code>public</code>.  <code>Public</code>, <code>protected</code>, and <code>private</code> are access
+                descriptors used to convey how and when the class or class member should be used.</p>
+            <ul>
+                <li><p><strong>Public</strong> classes and class members are available for use by any other class or
+                    application code and may be relied upon as a stable and persistent within major product
+                    versions.  Public classes and members may safely be extended via a subclass.</p>
+                </li>
+                <li><p><strong>Protected</strong> class members are stable <code>public</code> members intended to be used by the
+                    owning class or its subclasses.  Protected members may safely be extended via a subclass.</p>
+                </li>
+                <li><p><strong>Private</strong> classes and class members are used internally by the framework and are not
+                    intended to be used by application developers.  Private classes and members may change or
+                    be omitted from the framework at any time without notice and should not be relied upon in
+                    application logic.</p>
+                </li>
+            </ul>
+            <h3 id="member-types">Member Types</h3>
+            <ul>
+                <li><strong>Config</strong> - The configuration options for a class.</li>
+                <li><strong>Property</strong> - Set once a class is instantiated. *See Read Only below.</li>
+                <li><strong>Method</strong> - Actions that can be performed by a class.  Methods should be read as
+                    instance methods and can only be called from a instance of a given class.  Static methods
+                    that can be called directly from the class itself will have a <code>static</code> label next to the
+                    method name.  *See Static below.</li>
+                <li><strong>Event</strong> - Events are specific to the framework event system allowing for classes to
+                    programmatically raise an event to be handled by one or more event handler methods.  DOM
+                    events, while handled by the framework event system, are not specifically described
+                    within the API documentation.  *For DOM events refer to the
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/Events">event reference</a> page from MDN.</li>
+                <li><strong>Theme Variable</strong> - Variables used by the visual theme engine employed by the
+                    framework.</li>
+                <li><strong>Theme Mixin</strong> - Functions used by the visual theme engine employed by the framework
+                    and may use values set in various Theme Variables.</li>
+            </ul>
+            <h3 id="member-syntax">Member Syntax</h3>
+            <p>Below is an example class member that we can disect to show the syntax of a class member
+                (the lookupComponent method as viewed from the Ext.button.Button class in this case).</p>
+            <div style="position: relative;" class="show-inherited show-protected members">
+                <div style="border: 1px solid #E4E4E4;" class="classmembers member-protected isNotStatic isInherited member-expanded" data-member-name="lookupComponent">
+                    <div class="collapse-toggle">
+                        <i class="fa fa-caret-right"></i>
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="source-class"><a href="javascript:void(0);">Ext.container.Container</a><div class="viewSource"><a href="javascript:void(0);"></a><a target="_blank" href="javascript:void(0);">view source</a></div></div>
+                    <div class="member-header">
+                        <a href="javascript:void(0);" class="member-name-link"><span data-ref="method-lookupComponent" class="member-name"><strong>lookup</strong>Component</span></a>
+                        <span class="params-list"> ( item )</span> : <span class="memberType">Ext.Component</span>
+                        <div class="member-tags"><span class="protected">protected</span></div>
+                    </div>
+                    <p>Called when a raw config object is added to this container either during initialization of the <a href="javascript:void(0);">items</a> config,
+                        or when new items are <a href="javascript:void(0);">added), or {@link #insert inserted</a>.</p>
+                    <p>This method converts the passed object into an instanced child component.</p>
+                    <p>This may be overridden in subclasses when special processing needs to be applied to child creation.</p>
+                    <div class="detail-header">Parameters</div>
+                    <p><span class="params-list">item</span> :
+                        <span class="memberType">&nbsp;Object</span>
+                    </p>
+                    <div class="params-desc"><p>The config object being added.</p></div>
+                    <div class="detail-header">Returns</div>
+                    <span style="margin-left:12px;" class="memberType">Ext.Component</span>
+                    <div class="return-desc"><p>The component to be added.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <p>Let's look at each part of the member row:</p>
+            <ul>
+                <li><strong>Expand/Collapse</strong> - On the left-hand size of the member row is a control used to
+                    expand and collapse each member row to show / hide member details.</li>
+                <li><strong>Member Name</strong> - The name of the class member (<code>lookupComponent</code> in this example)</li>
+                <li><strong>Method Param</strong> - Any required or optional params used by a method (or passed to an
+                    event handler method) will be listed next to the method name within parenthesis
+                    (<code>( item )</code> in this example)</li>
+                <li><strong>Return type</strong> - The class instance or javascript object returned by the method or
+                    property (<code>Ext.Component</code> in this case).  This may be omitted for methods that do not
+                    return anything other than <code>undefined</code> or may display as multiple possible values
+                    separated by a forward slash <code>/</code> signifying that what is returned may depend on the
+                    results of the method call (i.e. a method may return a Component if a get method calls is
+                    successful or <code>false</code> if unsuccessful which would be displayed as
+                    <code>Ext.Component/Boolean</code>).</li>
+                <li><strong>Flags</strong> - Any flags applicable to the member will be displayed next (<code>PROTECTED</code> in
+                    this example - see the Flags section below)</li>
+                <li><strong>Member Origin</strong> - On the right-hand side of the member row is the class where the
+                    member was initially described (<code>Ext.container.Container</code> in this example).  The source
+                    class will be displayed as a blue link if the member originates from the current class
+                    and gray if it is inherited from an ancestor or mixed-in class.</li>
+                <li><strong>Member Source</strong> - On the right-hand side below the member origin class is a link to
+                    view the member's source (<code>view source</code> in the example)</li>
+                <li><strong>Params List</strong> - Each param for a class method will be listed using the same name
+                    found above in parenthesis, the type of class or object expected, and a description of
+                    the param (<code>item : Object</code> in the example).</li>
+                <li><strong>Returns</strong> - If a class returns a value other than <code>undefined</code> a "Returns" section
+                    will note the type of class or object returned and a description (<code>Ext.Component</code> in the
+                    example)</li>
+                <li><strong>Since</strong> (<em>not shown in the example</em>) - Some members will show which version of the
+                    product the member was first introduced (i.e. <code>Available since 3.4.0</code> - <em>not pictured in
+                        the example</em>) just after the member description</li>
+                <li><strong>Default</strong> (<em>not shown in the example</em>) - Configs often show the default config value
+                    to be applied to a class instance if not overridden (i.e. <code>Defaults to: false</code>)</li>
+            </ul>
+            <h3 id="member-flags">Member Flags</h3>
+            <p>The API documentation uses a number of flags to further commnicate the class member's
+                function and intent.  The label may be represented by a text label, an abbreviation, or
+                an icon.</p>
+            <ul>
+                <li><strong>Required</strong> - Required config when instantiating a class</li>
+                <li><strong>Bindable</strong> - The config has a setter which allows this config to be set via ViewModel
+                    binding</li>
+                <li><strong>Read Only</strong> - The property may be read, but cannot be used to configure /
+                    re-configure a class instance at runtime</li>
+                <li><strong>Singleton</strong> - Singleton classes are instantiated immediately once defined and may not
+                    be instantiated manually</li>
+                <li><strong>Static</strong> - A static method or property is a method or property belonging to the class
+                    itself, not an instance of the class</li>
+                <li><strong>Chainable</strong> - Refers to methods that return the class instance back when called.<br>This enables chained method calls like: <code>classInstance.method1().method2().etc();</code></li>
+                <li><strong>Deprecated</strong> - A class or member that is scheduled for removal in a future
+                    framework version and is provided in the current version for backwards compatibility.<br>Deprecated classes and members will have a message directing you to the preferred class /
+                    method going forward.</li>
+                <li><strong>Removed</strong> - A removed class or member that exists in documentation only as a
+                    reference for users upgrading between framework versions</li>
+                <li><strong>Template</strong> - A method defined within a base class designed to be overridden by
+                    subclasses</li>
+                <li><strong>Abstract</strong> - A class or member may be be defined as abstract.  Abstract classes and
+                    members establish a class structure and provide limited, if any, code.  Class-specific
+                    code will be furnished via overrides in subclasses.</li>
+                <li><strong>Preventable</strong> - Events marked preventable will not fire if <code>false</code> is returned from
+                    an event handler</li>
+            </ul>
+            <h3 id="class-icons">Class Icons</h3>
+            <p><span class="icon-demo class-icon fa fa-cube"></span> - Indicates a framework class  </p>
+            <p><span class="icon-demo singleton-icon fa fa-cube"></span> - A singleton framework class. *See the
+                singleton flag for more information  </p>
+            <p><span class="icon-demo component-icon fa fa-gear"></span> - A component-type framework class (any
+                class within the Ext JS framework that extends Ext.Component)  </p>
+            <p><span class="icon-demo display-new"></span> - Indicates that the class, member, or guide
+                is new in the currently viewed version</p>
+            <h3 id="member-icons">Member Icons</h3>
+            <p><span class="icon-demo fa fa-cubes"></span> - Indicates a class member of type <code>config</code>  </p>
+            <p><span class="icon-demo fa fa-book"></span> - Indicates a class member of type <code>property</code>  </p>
+            <p><span class="icon-demo fa fa-object-group"></span> - Indicates a class member of type
+                <code>method</code>  </p>
+            <p><span class="icon-demo fa fa-bolt"></span> - Indicates a class member of type <code>event</code>  </p>
+            <p><span class="icon-demo fa fa-paint-brush"></span> - Indicates a class member of type
+                <code>theme variable</code>  </p>
+            <p><span class="icon-demo fa fa-tint"></span> - Indicates a class member of type
+                <code>theme mixin</code>  </p>
+            <p><span class="icon-demo display-new"></span> - Indicates that the class, member, or guide
+                is new in the currently viewed version</p>
+            <h2 id="navigation-and-features">Navigation and Features</h2>
+            <h3 id="class-member-quick-nav-menu">Class Member Quick-Nav Menu</h3>
+            <p>Just below the class name on an API doc page is a row of buttons corresponding to the
+                types of members owned by the current class.  Each button shows a count of members by
+                type (this count is updated as filters are applied).  Clicking the button will navigate
+                you to that member section.  Hovering over the member-type button will reveal a popup
+                menu of all members of that type for quick navigation.</p>
+            <h3 id="getter-and-setter-methods">Getter and Setter Methods</h3>
+            <p>Getting and setter methods that correlate to a class config option will show up in the
+                methods section as well as in the configs section of both the API doc and the member-type
+                menus just beneath the config they work with.  The getter and setter method documentation
+                will be found in the config row for easy reference.</p>
+            <h3 id="history-bar">History Bar</h3>
+            <p>Your page history is kept in localstorage and displayed (using the available real estate)
+                just below the top title bar.  By default, the only search results shown are the pages
+                matching the product / version you're currently viewing.  You can expand what is
+                displayed by clicking on the <span class="icon-demo history-config"></span> button on the
+                right-hand side of the history bar and choosing the "All" radio option.  This will show
+                all recent pages in the history bar for all products / versions.</p>
+            <p>Within the history config menu you will also see a listing of your recent page visits.
+                The results are filtered by the "Current Product / Version" and "All" radio options.
+                Clicking on the <span class="icon-demo history-clear"></span> button will clear the history bar as
+                well as the history kept in local storage.</p>
+            <p>If "All" is selected in the history config menu the checkbox option for "Show product
+                details in the history bar" will be enabled.  When checked, the product/version for each
+                historic page will show alongside the page name in the history bar.  Hovering the cursor
+                over the page names in the history bar will also show the product/version as a tooltip.</p>
+            <h3 id="search-and-filters">Search and Filters</h3>
+            <p>Both API docs and guides can be searched for using the search field at the top of the
+                page.</p>
+            <p>On API doc pages there is also a filter input field that filters the member rows
+                using the filter string.  In addition to filtering by string you can filter the class
+                members by access level, inheritance, and read only.  This is done using the checkboxes at the top of
+                the page.</p>
+            <p>The checkbox at the bottom of the API class navigation tree filters the class list to
+                include or exclude private classes.</p>
+            <p>Clicking on an empty search field will show your last 10 searches for quick navigation.</p>
+            <h3 id="api-doc-class-metadata">API Doc Class Metadata</h3>
+            <p>Each API doc page (with the exception of Javascript primitives pages) has a menu view of
+                metadata relating to that class.  This metadata view will have one or more of the
+                following:</p>
+            <ul>
+                <li><strong>Alternate Name</strong> - One or more additional class name synonymns (in Ext JS 6.0.0 the
+                    <code>Ext.button.Button</code> class has an alternate class name of <code>Ext.Button</code>).  Alternate class
+                    names are commonly maintained for backward compatibility.</li>
+                <li><strong>Hierarchy</strong> - The hierararchy view lists the inheritance chain of the current class
+                    up through its ancestor classes up to the root base class.</li>
+                <li><strong>Mixins</strong> - A list of classes that are mixed into the current class</li>
+                <li><strong>Inherited Mixins</strong> - A list of classes that are mixed into an ancestor of the current
+                    class</li>
+                <li><strong>Requires</strong> - All classes required to be defined for the class to be instantiated</li>
+                <li><strong>Uses</strong> - A list of classes potentially used by the class at some point in its
+                    lifecycle, but not necessarily requried for the class to initially be instantiated</li>
+                <li><strong>Subclasses</strong> - Classes that extend the current class</li>
+            </ul>
+            <h3 id="expanding-and-collapsing-examples-and-class-members">Expanding and Collapsing Examples and Class Members</h3>
+            <p>Runnable examples (Fiddles) are expanded on a page by default.  You can collapse and
+                expand example code blocks individually using the arrow on the top-left of the code
+                block.  You can also toggle the collapse state of all examples using the toggle button on
+                the top-right of the page.  The toggle-all state will be remembered between page loads.</p>
+            <p>Class members are collapsed on a page by default.  You can expand and collapse members
+                using the arrow icon on the left of the member row or globally using the expand /
+                collapse all toggle button top-right.</p>
+            <h3 id="desktop-vs-mobile-view">Desktop -vs- Mobile View</h3>
+            <p>Viewing the docs on narrower screens or browsers will result in a view optimized for a
+                smaller form factor.  The primary differences between the desktop and "mobile" view are:</p>
+            <ul>
+                <li>Global navigation will be located in a menu on the left-hand side accessible via the
+                    hamburger menu icon.  The menu houses the following (on most pages):<ul>
+                        <li>The name of the current product (as a link to the product landing page)</li>
+                        <li>The Sencha icon used to navigate back to the documentation home page</li>
+                        <li>The product menu drop-down button</li>
+                        <li>Tabs of navigation trees for the API docs and guides</li>
+                    </ul>
+                </li>
+                <li>Current context navigation and tools is located on the right-hand side accessible via
+                    the gear icon.  The context menu houses teh following:<ul>
+                        <li>The global search input field</li>
+                        <li>(<em>API doc</em>) A "Filters" tab with the member filter, expand / collapse all examples
+                            button, expand / collapse all member rows button, the access level filter checkboxes,
+                            and the counts of each member</li>
+                        <li>(<em>API doc</em>) A "Related Classes" tab containing the menu of metadata related to the
+                            current class</li>
+                        <li>(<em>Guides</em>) The table of contents for the guide</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3 id="viewing-the-class-source">Viewing the Class Source</h3>
+            <p>The class source can be viewed by clicking on the class name at the top of an API doc
+                page.  The source for class members can be viewed by clicking on the "view source" link
+                on the right-hand side of the member row.</p>
+    
+        </div>
+    </div>
+
+    <div id="header">
+        <div class="home-link">
+            <a href="http://docs.sencha.com"><span class="fa fa-book"></span></a>
+        </div>
+        <div class="logo">
+            <a href="https://www.sencha.com"><img height="32" src="../../../../../assets/images/sencha_logo_thumb.png"/></a>
+        </div>
+        <span id="mobile-main-nav-menu-btn" class="fa fa-bars"></span>
+        <span data-tip="Product / Version Menu" class="fa fa-angle-down product-menu-btn product-menu-btn-wrap tooltip-tl-bl tooltip landing-product-menu-btn">
+            <div class="callout callout-b"></div>
+        </span>
+            <div class="page-title">5.1.3 to 6.0.0 Classic</div>
+
+        <span id="mobile-context-menu-btn" class="fa fa-cog"></span>
+    </div>
+
+    <div id="centerContent">
+        <div id="history-nav">
+            <span id="history-config" class="icon-btn history-config tooltip tooltip-tr-br" data-tip="Configure / Clear History">
+                <i class="fa fa-history"></i>
+                <div class="callout callout-b"></div>
+            </span>
+        </div>
+        <div id="class-tree-ct" class="class-tree">
+            <h2 class="product-header">
+                <div class="home-link">
+                    <a href="http://docs.sencha.com"><span class="fa fa-book"></span></a>
+                </div>
+                <div class="logo">
+                    <a href="https://www.sencha.com"><img src="../../../../../assets/images/sencha_logo1x.png"/></a>
+                </div>
+                <a href="../../../index.html">Ext JS 6.0.0 - Classic Toolkit</a>
+                <span data-tip="Product / Version Menu" class="fa fa-angle-down product-menu-btn product-menu-btn-wrap tooltip tooltip-tl-bl"><div class="callout callout-b"></div></span>
+            </h2>
+            <div id="tree-header" class="pre-load">
+                <div id="hide-class-tree" class="icon-btn">
+                    <i class="fa fa-close"></i>
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+            <div id="tree-scroller">
+                <div id="tree" class="show-private show-protected is-tree ">
+                    <div id="tree-sub-header"></div>
+                </div>
+                    <div class="private-class-toggle-ct">
+                        <label for="private-class-toggle" class="pointer gray">Show private classes</label>
+                        <input id="private-class-toggle" type="checkbox" name="privateClassToggle" />
+                    </div>
+            </div>
+        </div>
+
+        <a href="#" id="back-to-top">
+            <div class="fa fa-angle-up"></div>
+            <br>
+            top
+        </a>
+
+        <div id="rightMembers">
+<div class="context-menu-ct">
+    <div class="context-header">
+        <div id="hide-context-menu" class="fa fa-caret-right"></div>
+    </div>
+
+    <div class="search">
+        <form autocomplete="off">
+                <div class="toolkit-search-filter-ct">
+                    <span id="modern-search-filter" class="tooltip tooltip-tr-br active" data-tip="Include Modern Search Results"><div class="callout callout-b"></div></span>
+                    <span id="classic-search-filter" class="tooltip tooltip-tr-br active" data-tip="Include Classic Search Results"><div class="callout callout-b"></div></span>
+                </div>
+    
+            <input type="text" type="search" placeholder="search" id="searchtext" tabindex="1">
+            <i id="filtersubmit" class="fa fa-search"></i>
+            <span id="help-btn" data-tip="Docs Help" class="icon-btn tooltip tooltip-tr-br"><div class="callout callout-b"></div>
+                <i class="fa fa-question fa-inverse"></i>
+            </span>
+        </form>
+    </div>
+
+    <div id="toc-context-ct">
+        <!-- context content added at runtime -->
+    </div>
+</div>
+<div class="guide-body-wrap">
+    <div class="body-wrap-inner">
+        <div id="toggleExamples" class="icon-btn tooltip tooltip-tr-br" data-collapse="Collapse All Examples" data-expand="Expand All Examples">
+            <i class="fa fa-code"></i>
+            <div class="callout callout-b"></div>
+        </div>
+        <div class="classText">
+                    <div class="toolkit-badge-ct classic-badge">
+                        Guide applies to:
+                        <span class="toolkit-badge classic">
+                            classic
+                        </span>
+                    </div>
+            <style>
+.toc-page{
+    display:none !important;
+}
+</style>
+
+<h1 id="whats_new-_-api_diffs/600_classic_diff_-_differences_between_ext_js_5_1_1_and_ext_js_6_classic_toolkit">Differences Between Ext JS 5.1.1 and Ext JS 6 Classic Toolkit<a class="quick-link" href="#whats_new-_-api_diffs/600_classic_diff_-_differences_between_ext_js_5_1_1_and_ext_js_6_classic_toolkit"></a></h1>
+<h2 id="whats_new-_-api_diffs/600_classic_diff_-_added">Added<a class="quick-link" href="#whats_new-_-api_diffs/600_classic_diff_-_added"></a></h2>
+<ul>
+<li>Ext.Deferred</li>
+<li>Ext.Promise</li>
+<li>Ext.chart.interactions.ItemEdit</li>
+<li>Ext.chart.series.sprite.Series</li>
+<li>Ext.data.request.Ajax</li>
+<li>Ext.data.request.Base</li>
+<li>Ext.data.request.Form</li>
+<li>Ext.draw.Point</li>
+<li>Ext.exporter.Base</li>
+<li>Ext.exporter.Excel</li>
+<li>Ext.exporter.File</li>
+<li>Ext.exporter.file.Base</li>
+<li>Ext.exporter.file.excel.Cell</li>
+<li>Ext.exporter.file.excel.Column</li>
+<li>Ext.exporter.file.excel.Row</li>
+<li>Ext.exporter.file.excel.Style</li>
+<li>Ext.exporter.file.excel.Table</li>
+<li>Ext.exporter.file.excel.Workbook</li>
+<li>Ext.exporter.file.excel.Worksheet</li>
+<li>Ext.grid.plugin.Exporter</li>
+<li>Ext.grid.selection.Replicator</li>
+<li>Ext.grid.selection.SelectionExtender</li>
+<li>Ext.list.AbstractTreeItem</li>
+<li>Ext.list.RootTreeItem</li>
+<li>Ext.list.Tree</li>
+<li>Ext.list.TreeItem</li>
+<li>Ext.pivot.Aggregators</li>
+<li>Ext.pivot.Grid</li>
+<li>Ext.pivot.axis.Base</li>
+<li>Ext.pivot.axis.Item</li>
+<li>Ext.pivot.axis.Local</li>
+<li>Ext.pivot.dimension.Item</li>
+<li>Ext.pivot.filter.Base</li>
+<li>Ext.pivot.filter.Label</li>
+<li>Ext.pivot.filter.Value</li>
+<li>Ext.pivot.matrix.Base</li>
+<li>Ext.pivot.matrix.Local</li>
+<li>Ext.pivot.matrix.Remote</li>
+<li>Ext.pivot.plugin.Configurator</li>
+<li>Ext.pivot.plugin.DrillDown</li>
+<li>Ext.pivot.plugin.Exporter</li>
+<li>Ext.pivot.plugin.RangeEditor</li>
+<li>Ext.pivot.result.Base</li>
+<li>Ext.pivot.result.Collection</li>
+<li>Ext.pivot.result.Local</li>
+<li>Ext.promise.Promise</li>
+<li>Ext.ux.ajax.PivotSimlet</li>
+<li>Ext.ux.colorpick.Button</li>
+<li>Ext.ux.colorpick.ColorPreview</li>
+<li>Ext.ux.colorpick.Field</li>
+<li>Ext.ux.colorpick.Selector</li>
+<li>Ext.ux.colorpick.SelectorModel</li>
+<li>Ext.ux.desktop.Video</li>
+<li>Ext.ux.layout.ResponsiveColumn</li>
+<li>Ext.ux.rating.Picker</li>
+</ul>
+<h2 id="whats_new-_-api_diffs/600_classic_diff_-_modified">Modified<a class="quick-link" href="#whats_new-_-api_diffs/600_classic_diff_-_modified"></a></h2>
+<ul>
+<li>Ext<ul>
+<li>Added<ul>
+<li>method<ul>
+<li>all</li>
+<li>asap</li>
+<li>asapCancel</li>
+<li>raise</li>
+</ul>
+</li>
+<li>property<ul>
+<li>enableAria</li>
+<li>enableAriaButtons</li>
+<li>enableAriaPanels</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.Array<ul>
+<li>Added<ul>
+<li>method<ul>
+<li>reduce</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.Base<ul>
+<li>Added<ul>
+<li>property<ul>
+<li>destroyed</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.Component<ul>
+<li>Added<ul>
+<li>event<ul>
+<li>afterlayoutanimation</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.ComponentQuery<ul>
+<li>Added<ul>
+<li>method<ul>
+<li>first</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.Img<ul>
+<li>Modified<ul>
+<li>property<ul>
+<li>maskOnDisable<ul>
+<li>5.1.1<ul>
+<li>default value is false</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>default value is true</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.LoadMask<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$loadmask-page-background-color</li>
+<li>$loadmask-page-opacity</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.Widget<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>style</li>
+</ul>
+</li>
+<li>method<ul>
+<li>applyStyle</li>
+<li>getStyle</li>
+<li>setStyle</li>
+<li>toggleCls</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.app.Application<ul>
+<li>Added<ul>
+<li>method<ul>
+<li>onAppUpdate</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.button.Button<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$button-default-arrow-glyph-color</li>
+<li>$button-default-split-line-color</li>
+<li>$button-grid-cell-arrow-glyph</li>
+<li>$button-grid-cell-arrow-glyph-color</li>
+<li>$button-grid-cell-glyph-font-size</li>
+<li>$button-grid-cell-split-line-color</li>
+<li>$button-grid-cell-split-line-width</li>
+<li>$button-large-arrow-glyph</li>
+<li>$button-large-glyph-font-size</li>
+<li>$button-large-split-line-width</li>
+<li>$button-medium-arrow-glyph</li>
+<li>$button-medium-glyph-font-size</li>
+<li>$button-medium-split-line-width</li>
+<li>$button-small-arrow-glyph</li>
+<li>$button-small-glyph-font-size</li>
+<li>$button-small-split-line-width</li>
+<li>$button-split-line-width</li>
+<li>$button-toolbar-arrow-glyph-color</li>
+<li>$button-toolbar-split-line-color</li>
+</ul>
+</li>
+<li>event<ul>
+<li>beforetoggle</li>
+</ul>
+</li>
+<li>method<ul>
+<li>click</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.button.Segmented<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>forceSelection</li>
+</ul>
+</li>
+<li>event<ul>
+<li>change</li>
+</ul>
+</li>
+<li>method<ul>
+<li>getForceSelection</li>
+<li>setForceSelection</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.chart.AbstractChart<ul>
+<li>Added<ul>
+<li>event<ul>
+<li>storechange</li>
+</ul>
+</li>
+<li>method<ul>
+<li>cancelChartLayout</li>
+<li>getInteraction</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Removed<ul>
+<li>method<ul>
+<li>cancelLayout</li>
+</ul>
+</li>
+<li>property<ul>
+<li>version</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.chart.CartesianChart<ul>
+<li>Removed<ul>
+<li>method<ul>
+<li>onPlaceWatermark</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.chart.MarkerHolder<ul>
+<li>Added<ul>
+<li>method<ul>
+<li>getMarker</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modified<ul>
+<li>method<ul>
+<li>getBoundMarker<ul>
+<li>5.1.1<ul>
+<li>private is true</li>
+<li>return type is void</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>deprecated</li>
+<li>private is false</li>
+<li>return type is Ext.chart.Markers[]</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.chart.interactions.ItemHighlight<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>sticky</li>
+</ul>
+</li>
+<li>method<ul>
+<li>getSticky</li>
+<li>setSticky</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.chart.series.Gauge<ul>
+<li>Removed<ul>
+<li>config<ul>
+<li>field</li>
+</ul>
+</li>
+<li>method<ul>
+<li>getField</li>
+<li>setField</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.chart.series.Pie<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>radiusField</li>
+</ul>
+</li>
+<li>method<ul>
+<li>getRadiusField</li>
+<li>setRadiusField</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modified<ul>
+<li>config<ul>
+<li>highlightCfg<ul>
+<li>5.1.1<ul>
+<li>type is Object</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>type is Ext.chart.series.sprite.PieSlice/Object</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>method<ul>
+<li>getHighlightCfg<ul>
+<li>5.1.1<ul>
+<li>return type is Object</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>return type is Ext.chart.series.sprite.PieSlice/Object</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Removed<ul>
+<li>config<ul>
+<li>field</li>
+<li>labelField</li>
+<li>lengthField</li>
+</ul>
+</li>
+<li>method<ul>
+<li>getLabelField</li>
+<li>getLengthField</li>
+<li>setLabelField</li>
+<li>setLengthField</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.chart.series.Pie3D<ul>
+<li>Modified<ul>
+<li>config<ul>
+<li>hidden<ul>
+<li>5.1.1<ul>
+<li>default value is false</li>
+<li>type is Boolean|Array</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>default value is []</li>
+<li>type is Array</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>method<ul>
+<li>getHidden<ul>
+<li>5.1.1<ul>
+<li>return type is Boolean|Array</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>return type is Array</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Removed<ul>
+<li>config<ul>
+<li>field</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.chart.series.Polar<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>radiusField</li>
+</ul>
+</li>
+<li>method<ul>
+<li>getRadiusField</li>
+<li>setRadiusField</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modified<ul>
+<li>method<ul>
+<li>getAngleField<ul>
+<li>5.1.1<ul>
+<li>private is true</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>private is false</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>getXField<ul>
+<li>5.1.1<ul>
+<li>private is false</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>private is true</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>getYField<ul>
+<li>5.1.1<ul>
+<li>private is false</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>private is true</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>setAngleField<ul>
+<li>5.1.1<ul>
+<li>private is true</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>private is false</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>setXField<ul>
+<li>5.1.1<ul>
+<li>private is false</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>private is true</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>setYField<ul>
+<li>5.1.1<ul>
+<li>private is false</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>private is true</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Removed<ul>
+<li>config<ul>
+<li>lengthField</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.chart.series.Series<ul>
+<li>Added<ul>
+<li>event<ul>
+<li>storechange</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modified<ul>
+<li>method<ul>
+<li>getItemByIndex<ul>
+<li>5.1.1<ul>
+<li>private is true</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>private is false</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Removed<ul>
+<li>config<ul>
+<li>labelField</li>
+</ul>
+</li>
+<li>method<ul>
+<li>getLabelField</li>
+<li>setLabelField</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.chart.series.sprite.Bar3D<ul>
+<li>Added<ul>
+<li>attribute<ul>
+<li>colorSpread</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.chart.series.sprite.Box<ul>
+<li>Added<ul>
+<li>attribute<ul>
+<li>colorSpread</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.chart.series.sprite.Cartesian<ul>
+<li>5.1.1<ul>
+<li>extends Ext.draw.sprite.Sprite</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>extends Ext.chart.series.sprite.Series</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.chart.series.sprite.Pie3DPart<ul>
+<li>Added<ul>
+<li>attribute<ul>
+<li>bevelWidth</li>
+<li>colorSpread</li>
+<li>label</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.chart.series.sprite.PieSlice<ul>
+<li>Added<ul>
+<li>method<ul>
+<li>getSeries</li>
+<li>setSeries</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.chart.series.sprite.Polar<ul>
+<li>5.1.1<ul>
+<li>extends Ext.draw.sprite.Sprite</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>extends Ext.chart.series.sprite.Series</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.container.Container<ul>
+<li>Removed<ul>
+<li>method<ul>
+<li>doLayout</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.data.Connection<ul>
+<li>Modified<ul>
+<li>method<ul>
+<li>request<ul>
+<li>5.1.1<ul>
+<li>return type is Object</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>return type is Ext.data.request.Base</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.data.Model<ul>
+<li>Added<ul>
+<li>property<ul>
+<li>defaultProxy</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.data.TreeStore<ul>
+<li>5.1.1<ul>
+<li>superclass is Ext.data.NodeStore</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>superclass is Ext.data.Store</li>
+</ul>
+</li>
+<li>Removed<ul>
+<li>config<ul>
+<li>recursive</li>
+</ul>
+</li>
+<li>method<ul>
+<li>getRecursive</li>
+<li>setRecursive</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.data.reader.Reader<ul>
+<li>Modified<ul>
+<li>config<ul>
+<li>keepRawData<ul>
+<li>5.1.1<ul>
+<li>default value is true</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>default value is null</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.dom.Element<ul>
+<li>Added<ul>
+<li>event<ul>
+<li>focusmove</li>
+</ul>
+</li>
+<li>method<ul>
+<li>clone</li>
+</ul>
+</li>
+<li>property<ul>
+<li>CLIP</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.draw.Container<ul>
+<li>Added<ul>
+<li>event<ul>
+<li>bodyresize</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Removed<ul>
+<li>method<ul>
+<li>onPlaceWatermark</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.draw.Surface<ul>
+<li>Modified<ul>
+<li>method<ul>
+<li>add<ul>
+<li>5.1.1<ul>
+<li>return type is void</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>return type is Ext.draw.sprite.Sprite/Ext.draw.sprite.Sprite[]</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>remove<ul>
+<li>5.1.1<ul>
+<li>return type is void</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>return type is Ext.draw.sprite.Sprite/null</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.draw.engine.Svg<ul>
+<li>Modified<ul>
+<li>method<ul>
+<li>remove<ul>
+<li>5.1.1<ul>
+<li>return type is void</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>return type is Ext.draw.sprite.Sprite/null</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.draw.sprite.Sprite<ul>
+<li>Added<ul>
+<li>method<ul>
+<li>remove</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modified<ul>
+<li>config<ul>
+<li>parent<ul>
+<li>5.1.1<ul>
+<li>private is true</li>
+<li>type is Object</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>private is false</li>
+<li>type is Ext.draw.Surface/Ext.draw.sprite.Instancing/Ext.draw.sprite.Composite</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>method<ul>
+<li>getParent<ul>
+<li>5.1.1<ul>
+<li>return type is Object</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>return type is Ext.draw.Surface/Ext.draw.sprite.Instancing/Ext.draw.sprite.Composite</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.event.Event<ul>
+<li>Added<ul>
+<li>method<ul>
+<li>getKeyName</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.form.FieldSet<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>descriptionText</li>
+<li>expandText</li>
+</ul>
+</li>
+<li>cssVar<ul>
+<li>$fieldset-tool-collapse-glyph</li>
+<li>$fieldset-tool-expand-glyph</li>
+<li>$fieldset-tool-glyph-color</li>
+<li>$fieldset-tool-glyph-font-size</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.form.field.Base<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>formatText</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.form.field.Checkbox<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$form-checkbox-checked-glyph</li>
+<li>$form-checkbox-glyph</li>
+<li>$form-checkbox-glyph-color</li>
+<li>$form-checkbox-glyph-focus-color</li>
+<li>$form-radio-checked-glyph</li>
+<li>$form-radio-glyph</li>
+<li>$form-radio-glyph-color</li>
+<li>$form-radio-glyph-focus-color</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.form.field.Date<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>ariaDisabledDatesText</li>
+<li>ariaDisabledDaysText</li>
+<li>ariaFormat</li>
+<li>ariaMaxText</li>
+<li>ariaMinText</li>
+<li>formatText</li>
+</ul>
+</li>
+<li>cssVar<ul>
+<li>$form-date-trigger-glyph</li>
+<li>$form-date-trigger-glyph-color</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modified<ul>
+<li>property<ul>
+<li>ariaRole<ul>
+<li>5.1.1<ul>
+<li>default value is &#39;textbox&#39;</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>default value is &#39;combobox&#39;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.form.field.Display<ul>
+<li>Modified<ul>
+<li>property<ul>
+<li>ariaRole<ul>
+<li>5.1.1<ul>
+<li>default value is &#39;textbox&#39;</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>default value is null</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.form.field.Hidden<ul>
+<li>Removed<ul>
+<li>method<ul>
+<li>clearInvalid</li>
+<li>markInvalid</li>
+<li>setHeight</li>
+<li>setPagePosition</li>
+<li>setPosition</li>
+<li>setSize</li>
+<li>setWidth</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.form.field.HtmlEditor<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$html-editor-aligncenter-glyph</li>
+<li>$html-editor-alignleft-glyph</li>
+<li>$html-editor-alignright-glyph</li>
+<li>$html-editor-backcolor-glyph</li>
+<li>$html-editor-bold-glyph</li>
+<li>$html-editor-bulletlist-glyph</li>
+<li>$html-editor-forecolor-glyph</li>
+<li>$html-editor-glyph-color</li>
+<li>$html-editor-glyph-font-size</li>
+<li>$html-editor-growtext-glyph</li>
+<li>$html-editor-hyperlink-glyph</li>
+<li>$html-editor-italic-glyph</li>
+<li>$html-editor-numberedlist-glyph</li>
+<li>$html-editor-shrinktext-glyph</li>
+<li>$html-editor-sourceedit-glyph</li>
+<li>$html-editor-underline-glyph</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.form.field.Spinner<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$spinner-toolbar-trigger-down-glyph</li>
+<li>$spinner-toolbar-trigger-glyph-color</li>
+<li>$spinner-toolbar-trigger-up-glyph</li>
+<li>$spinner-trigger-down-glyph</li>
+<li>$spinner-trigger-glyph-color</li>
+<li>$spinner-trigger-up-glyph</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.form.field.Tag<ul>
+<li>Added<ul>
+<li>cssMixin<ul>
+<li>extjs-tag-field-ui</li>
+</ul>
+</li>
+<li>cssVar<ul>
+<li>$include-tag-field-default-ui</li>
+<li>$tag-field-item-background-color</li>
+<li>$tag-field-item-border-color</li>
+<li>$tag-field-item-border-radius</li>
+<li>$tag-field-item-border-style</li>
+<li>$tag-field-item-border-width</li>
+<li>$tag-field-item-close-icon-glyph</li>
+<li>$tag-field-item-close-icon-glyph-color</li>
+<li>$tag-field-item-close-icon-opacity</li>
+<li>$tag-field-item-close-icon-opacity-over</li>
+<li>$tag-field-item-close-icon-opacity-pressed</li>
+<li>$tag-field-item-close-icon-right</li>
+<li>$tag-field-item-close-icon-size</li>
+<li>$tag-field-item-close-icon-spacing</li>
+<li>$tag-field-item-close-icon-top</li>
+<li>$tag-field-item-color</li>
+<li>$tag-field-item-height</li>
+<li>$tag-field-item-margin</li>
+<li>$tag-field-item-over-background-color</li>
+<li>$tag-field-item-over-border-color</li>
+<li>$tag-field-item-over-close-icon-glyph-color</li>
+<li>$tag-field-item-over-color</li>
+<li>$tag-field-item-padding</li>
+<li>$tag-field-item-selected-background-color</li>
+<li>$tag-field-item-selected-border-color</li>
+<li>$tag-field-item-selected-close-icon-glyph-color</li>
+<li>$tag-field-item-selected-color</li>
+<li>$tag-field-item-selected-over-close-icon-glyph-color</li>
+<li>$tag-field-padding</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.form.field.Text<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$form-clear-trigger-glyph</li>
+<li>$form-clear-trigger-glyph-color</li>
+<li>$form-search-trigger-glyph</li>
+<li>$form-search-trigger-glyph-color</li>
+<li>$form-toolbar-trigger-glyph</li>
+<li>$form-toolbar-trigger-glyph-color</li>
+<li>$form-trigger-glyph</li>
+<li>$form-trigger-glyph-color</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.form.field.Time<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>formatText</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.grid.CellContext<ul>
+<li>Added<ul>
+<li>method<ul>
+<li>getCell</li>
+<li>getNode</li>
+<li>getRow</li>
+</ul>
+</li>
+<li>property<ul>
+<li>colIdx</li>
+<li>column</li>
+<li>record</li>
+<li>rowIdx</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modified<ul>
+<li>method<ul>
+<li>clone<ul>
+<li>5.1.1<ul>
+<li>private is true</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>private is false</li>
+<li>return type is Ext.grid.CellContext</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>isEqual<ul>
+<li>5.1.1<ul>
+<li>private is true</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>private is false</li>
+<li>return type is Boolean</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>setPosition<ul>
+<li>5.1.1<ul>
+<li>private is true</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>private is false</li>
+<li>return type is Ext.grid.CellContext</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.grid.column.Action<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$grid-actioncolumn-icon-glyph-color</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.grid.column.Check<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$grid-checkcolumn-checked-glyph</li>
+<li>$grid-checkcolumn-glyph</li>
+<li>$grid-checkcolumn-glyph-color</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.grid.column.Column<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>ignoreExport</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.grid.column.RowNumberer<ul>
+<li>Added<ul>
+<li>property<ul>
+<li>isRowNumberer</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.grid.feature.Grouping<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$grid-grouped-menu-group-by-glyph</li>
+<li>$grid-grouped-title-collapse-glyph</li>
+<li>$grid-grouped-title-expand-glyph</li>
+<li>$grid-grouped-title-glyph-color</li>
+<li>$grid-grouped-title-glyph-font-size</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.grid.filters.Filters<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$grid-filters-header-menu-equals-glyph</li>
+<li>$grid-filters-header-menu-find-glyph</li>
+<li>$grid-filters-header-menu-greater-than-glyph</li>
+<li>$grid-filters-header-menu-less-than-glyph</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.grid.header.Container<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$grid-header-menu-columns-glyph</li>
+<li>$grid-header-menu-glyph-color</li>
+<li>$grid-header-menu-glyph-font-size</li>
+<li>$grid-header-menu-sort-asc-glyph</li>
+<li>$grid-header-menu-sort-desc-glyph</li>
+<li>$grid-header-sort-asc-glyph</li>
+<li>$grid-header-sort-desc-glyph</li>
+<li>$grid-header-sort-glyph-color</li>
+<li>$grid-header-sort-glyph-font-size</li>
+<li>$grid-header-sorted-background-color</li>
+<li>$grid-header-sorted-background-gradient</li>
+<li>$grid-header-trigger-background-image</li>
+<li>$grid-header-trigger-glyph</li>
+<li>$grid-header-trigger-glyph-color</li>
+<li>$grid-header-trigger-glyph-font-size</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.grid.plugin.CellEditing<ul>
+<li>Added<ul>
+<li>method<ul>
+<li>activateCell</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modified<ul>
+<li>method<ul>
+<li>startEdit<ul>
+<li>5.1.1<ul>
+<li>return type is Boolean</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>return type is void</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Removed<ul>
+<li>method<ul>
+<li>onSpecialKey</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.grid.plugin.Clipboard<ul>
+<li>Added<ul>
+<li>method<ul>
+<li>getTarget</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.grid.plugin.Editing<ul>
+<li>Removed<ul>
+<li>method<ul>
+<li>startEdit</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.grid.plugin.RowEditing<ul>
+<li>Added<ul>
+<li>method<ul>
+<li>activateCell</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Ext.grid.plugin.RowExpander</p>
+<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$row-expander-collapse-glyph</li>
+<li>$row-expander-expand-glyph</li>
+<li>$row-expander-glyph-color</li>
+<li>$row-expander-glyph-font-size</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Removed<ul>
+<li>config<ul>
+<li>expandOnEnter</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Ext.grid.selection.Rows</p>
+<ul>
+<li>Added<ul>
+<li>method<ul>
+<li>getFirstRowIndex</li>
+<li>getLastRowIndex</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.grid.selection.SpreadsheetModel<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>extensible</li>
+</ul>
+</li>
+<li>method<ul>
+<li>getExtensible</li>
+<li>setExtensible</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.layout.container.Accordion<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>wrapOver</li>
+</ul>
+</li>
+<li>cssVar<ul>
+<li>$accordion-tool-collapse-glyph</li>
+<li>$accordion-tool-expand-glyph</li>
+<li>$accordion-tool-glyph-color</li>
+<li>$accordion-tool-glyph-font-size</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.menu.CheckItem<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>submenuText</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.menu.Menu<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>&#36;menu-glyph-font-size</li>
+<li>&#36;menu-item-active-arrow-glyph-color</li>
+<li>&#36;menu-item-active-checkbox-glyph-color</li>
+<li>&#36;menu-item-active-checkbox-group-glyph-color</li>
+<li>&#36;menu-item-active-glyph-color</li>
+<li>&#36;menu-item-active-text-color</li>
+<li>&#36;menu-item-arrow-glyph</li>
+<li>&#36;menu-item-arrow-glyph-color</li>
+<li>&#36;menu-item-arrow-glyph-font-size</li>
+<li>&#36;menu-item-arrow-margin</li>
+<li>&#36;menu-item-checkbox-checked-glyph</li>
+<li>&#36;menu-item-checkbox-glyph</li>
+<li>&#36;menu-item-checkbox-glyph-color</li>
+<li>&#36;menu-item-checkbox-glyph-font-size</li>
+<li>&#36;menu-item-checkbox-group-checked-glyph</li>
+<li>&#36;menu-item-checkbox-group-glyph</li>
+<li>&#36;menu-item-checkbox-group-glyph-color</li>
+<li>&#36;menu-scroller-bottom-glyph</li>
+<li>&#36;menu-scroller-glyph-color</li>
+<li>&#36;menu-scroller-glyph-font-size</li>
+<li>&#36;menu-scroller-top-glyph</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.mixin.Observable<ul>
+<li>Added<ul>
+<li>method<ul>
+<li>fireEventedAction</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.panel.Panel<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>closeToolText</li>
+<li>collapseToolText</li>
+<li>defaultButton</li>
+<li>defaultButtonTarget</li>
+<li>expandToolText</li>
+</ul>
+</li>
+<li>cssVar<ul>
+<li>$panel-tool-focus-outline-color</li>
+<li>$panel-tool-focus-outline-offset</li>
+<li>$panel-tool-focus-outline-style</li>
+<li>$panel-tool-focus-outline-width</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.panel.Table<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>headerBorders</li>
+</ul>
+</li>
+<li>event<ul>
+<li>beforeselectionextend</li>
+<li>headermenucreate</li>
+<li>selectionextenderdrag</li>
+</ul>
+</li>
+<li>method<ul>
+<li>getHeaderBorders</li>
+<li>registerActionable</li>
+<li>setHeaderBorders</li>
+</ul>
+</li>
+<li>property<ul>
+<li>actionables</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.panel.Tool<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$tool-close-glyph</li>
+<li>$tool-collapse-bottom-glyph</li>
+<li>$tool-collapse-glyph</li>
+<li>$tool-collapse-left-glyph</li>
+<li>$tool-collapse-right-glyph</li>
+<li>$tool-collapse-top-glyph</li>
+<li>$tool-down-glyph</li>
+<li>$tool-expand-bottom-glyph</li>
+<li>$tool-expand-glyph</li>
+<li>$tool-expand-left-glyph</li>
+<li>$tool-expand-right-glyph</li>
+<li>$tool-expand-top-glyph</li>
+<li>$tool-gear-glyph</li>
+<li>$tool-glyph-color</li>
+<li>$tool-glyph-font-size</li>
+<li>$tool-help-glyph</li>
+<li>$tool-left-glyph</li>
+<li>$tool-maximize-glyph</li>
+<li>$tool-minimize-glyph</li>
+<li>$tool-minus-glyph</li>
+<li>$tool-move-glyph</li>
+<li>$tool-next-glyph</li>
+<li>$tool-pin-glyph</li>
+<li>$tool-plus-glyph</li>
+<li>$tool-prev-glyph</li>
+<li>$tool-print-glyph</li>
+<li>$tool-refresh-glyph</li>
+<li>$tool-resize-glyph</li>
+<li>$tool-restore-glyph</li>
+<li>$tool-right-glyph</li>
+<li>$tool-save-glyph</li>
+<li>$tool-search-glyph</li>
+<li>$tool-toggle-down-glyph</li>
+<li>$tool-toggle-up-glyph</li>
+<li>$tool-unpin-glyph</li>
+<li>$tool-up-glyph</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.picker.Date<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>ariaDisabledDatesText</li>
+<li>ariaDisabledDaysText</li>
+<li>ariaMaxText</li>
+<li>ariaMinText</li>
+<li>footerButtonUI</li>
+</ul>
+</li>
+<li>cssVar<ul>
+<li>$datepicker-arrow-glyph-color</li>
+<li>$datepicker-item-hover-background-color</li>
+<li>$datepicker-item-selected-background-color</li>
+<li>$datepicker-item-selected-border-color</li>
+<li>$datepicker-item-selected-color</li>
+<li>$datepicker-item-today-background-color</li>
+<li>$datepicker-month-button-arrow-glyph</li>
+<li>$datepicker-month-button-arrow-glyph-color</li>
+<li>$datepicker-month-button-background-color</li>
+<li>$datepicker-month-button-font-size</li>
+<li>$datepicker-month-button-over-background-color</li>
+<li>$datepicker-month-button-padding</li>
+<li>$datepicker-month-button-pressed-background-color</li>
+<li>$datepicker-monthpicker-arrow-glyph-color</li>
+<li>$datepicker-monthpicker-item-selected-color</li>
+<li>$datepicker-monthpicker-next-glyph</li>
+<li>$datepicker-monthpicker-prev-glyph</li>
+<li>$datepicker-next-glyph</li>
+<li>$datepicker-prev-glyph</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Removed<ul>
+<li>cssVar<ul>
+<li>$datepicker-use-transparent-month-button</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.picker.Month<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>footerButtonUI</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.plugin.AbstractClipboard<ul>
+<li>Added<ul>
+<li>method<ul>
+<li>getTarget</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.resizer.Splitter<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$splitter-collapse-tool-background-color</li>
+<li>$splitter-collapse-tool-border-color</li>
+<li>$splitter-collapse-tool-border-style</li>
+<li>$splitter-collapse-tool-border-width</li>
+<li>$splitter-collapse-tool-bottom-glyph</li>
+<li>$splitter-collapse-tool-bottom-glyph-padding</li>
+<li>$splitter-collapse-tool-glyph-color</li>
+<li>$splitter-collapse-tool-glyph-font-size</li>
+<li>$splitter-collapse-tool-left-glyph</li>
+<li>$splitter-collapse-tool-left-glyph-padding</li>
+<li>$splitter-collapse-tool-right-glyph</li>
+<li>$splitter-collapse-tool-right-glyph-padding</li>
+<li>$splitter-collapse-tool-top-glyph</li>
+<li>$splitter-collapse-tool-top-glyph-padding</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.scroll.Scroller<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>slotSnapSize</li>
+</ul>
+</li>
+<li>method<ul>
+<li>getClientSize</li>
+<li>getSlotSnapSize</li>
+<li>isInView</li>
+<li>setSlotSnapSize</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.selection.CheckboxModel<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$checkbox-selection-model-checked-glyph</li>
+<li>$checkbox-selection-model-glyph</li>
+<li>$checkbox-selection-model-glyph-color</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.slider.Multi<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>pageSize</li>
+</ul>
+</li>
+<li>cssVar<ul>
+<li>$horizontal-slider-thumb-glyph</li>
+<li>$slider-imageless</li>
+<li>$slider-thumb-background-color</li>
+<li>$slider-thumb-background-color-drag</li>
+<li>$slider-thumb-background-color-focus</li>
+<li>$slider-thumb-background-color-over</li>
+<li>$slider-thumb-border-color</li>
+<li>$slider-thumb-border-color-drag</li>
+<li>$slider-thumb-border-color-focus</li>
+<li>$slider-thumb-border-color-over</li>
+<li>$slider-thumb-border-radius</li>
+<li>$slider-thumb-border-style</li>
+<li>$slider-thumb-border-width</li>
+<li>$slider-thumb-glyph-color</li>
+<li>$slider-thumb-glyph-color-drag</li>
+<li>$slider-thumb-glyph-color-focus</li>
+<li>$slider-thumb-glyph-color-over</li>
+<li>$slider-thumb-glyph-font-size</li>
+<li>$slider-track-background-color</li>
+<li>$slider-track-border-color</li>
+<li>$slider-track-border-radius</li>
+<li>$slider-track-border-style</li>
+<li>$slider-track-border-width</li>
+<li>$slider-track-size</li>
+<li>$vertical-slider-thumb-glyph</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.supports<ul>
+<li>Added<ul>
+<li>property<ul>
+<li>CloneNodeCopiesExpando</li>
+<li>HighContrastMode</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.tab.Bar<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$tabbar-plain-padding</li>
+<li>$tabbar-plain-scroller-glyph-color</li>
+<li>$tabbar-scroller-bottom-glyph</li>
+<li>$tabbar-scroller-glyph-color</li>
+<li>$tabbar-scroller-glyph-font-size</li>
+<li>$tabbar-scroller-left-glyph</li>
+<li>$tabbar-scroller-right-glyph</li>
+<li>$tabbar-scroller-top-glyph</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.tab.Tab<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$tab-background-opacity</li>
+<li>$tab-background-opacity-active</li>
+<li>$tab-background-opacity-disabled</li>
+<li>$tab-background-opacity-focus</li>
+<li>$tab-background-opacity-focus-active</li>
+<li>$tab-background-opacity-focus-over</li>
+<li>$tab-background-opacity-over</li>
+<li>$tab-closable-icon-glyph</li>
+<li>$tab-closable-icon-glyph-color</li>
+<li>$tab-closable-icon-glyph-color-active</li>
+<li>$tab-closable-icon-glyph-color-disabled</li>
+<li>$tab-closable-icon-glyph-color-focus</li>
+<li>$tab-closable-icon-glyph-color-focus-active</li>
+<li>$tab-closable-icon-glyph-color-focus-over</li>
+<li>$tab-closable-icon-glyph-color-over</li>
+<li>$tab-opacity</li>
+<li>$tab-opacity-active</li>
+<li>$tab-opacity-focus</li>
+<li>$tab-opacity-focus-active</li>
+<li>$tab-opacity-focus-over</li>
+<li>$tab-opacity-over</li>
+<li>$tab-outline-color-focus</li>
+<li>$tab-outline-offset-focus</li>
+<li>$tab-outline-style-focus</li>
+<li>$tab-outline-width-focus</li>
+<li>$tab-plain-background-color</li>
+<li>$tab-plain-background-color-active</li>
+<li>$tab-plain-background-color-disabled</li>
+<li>$tab-plain-background-color-focus</li>
+<li>$tab-plain-background-color-focus-active</li>
+<li>$tab-plain-background-color-focus-over</li>
+<li>$tab-plain-background-color-over</li>
+<li>$tab-plain-border-color</li>
+<li>$tab-plain-border-color-active</li>
+<li>$tab-plain-border-color-disabled</li>
+<li>$tab-plain-border-color-focus</li>
+<li>$tab-plain-border-color-focus-active</li>
+<li>$tab-plain-border-color-focus-over</li>
+<li>$tab-plain-border-color-over</li>
+<li>$tab-plain-closable-icon-glyph-color</li>
+<li>$tab-plain-closable-icon-glyph-color-active</li>
+<li>$tab-plain-closable-icon-glyph-color-disabled</li>
+<li>$tab-plain-closable-icon-glyph-color-focus</li>
+<li>$tab-plain-closable-icon-glyph-color-focus-active</li>
+<li>$tab-plain-closable-icon-glyph-color-focus-over</li>
+<li>$tab-plain-closable-icon-glyph-color-over</li>
+<li>$tab-plain-color</li>
+<li>$tab-plain-color-active</li>
+<li>$tab-plain-color-disabled</li>
+<li>$tab-plain-color-focus</li>
+<li>$tab-plain-color-focus-active</li>
+<li>$tab-plain-color-focus-over</li>
+<li>$tab-plain-color-over</li>
+<li>$tab-plain-glyph-color</li>
+<li>$tab-plain-glyph-color-active</li>
+<li>$tab-plain-glyph-color-disabled</li>
+<li>$tab-plain-glyph-color-focus</li>
+<li>$tab-plain-glyph-color-focus-active</li>
+<li>$tab-plain-glyph-color-focus-over</li>
+<li>$tab-plain-glyph-color-over</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modified<ul>
+<li>config<ul>
+<li>tabIndex<ul>
+<li>5.1.1<ul>
+<li>default value is null</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>default value is 0</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.tip.Tip<ul>
+<li>Modified<ul>
+<li>property<ul>
+<li>maskOnDisable<ul>
+<li>5.1.1<ul>
+<li>default value is true</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>default value is false</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.toolbar.Breadcrumb<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$breadcrumb-arrow-expanded-glyph</li>
+<li>$breadcrumb-arrow-expanded-glyph-color</li>
+<li>$breadcrumb-arrow-glyph</li>
+<li>$breadcrumb-arrow-glyph-color</li>
+<li>$breadcrumb-folder-glyph</li>
+<li>$breadcrumb-folder-glyph-color</li>
+<li>$breadcrumb-folder-open-glyph</li>
+<li>$breadcrumb-folder-open-glyph-color</li>
+<li>$breadcrumb-folder-open-icon</li>
+<li>$breadcrumb-glyph-color</li>
+<li>$breadcrumb-glyph-font-size</li>
+<li>$breadcrumb-leaf-glyph</li>
+<li>$breadcrumb-leaf-glyph-color</li>
+</ul>
+</li>
+<li>event<ul>
+<li>change</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.toolbar.Paging<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$grid-paging-toolbar-first-glyph</li>
+<li>$grid-paging-toolbar-glyph-color</li>
+<li>$grid-paging-toolbar-glyph-font-size</li>
+<li>$grid-paging-toolbar-last-glyph</li>
+<li>$grid-paging-toolbar-next-glyph</li>
+<li>$grid-paging-toolbar-prev-glyph</li>
+<li>$grid-paging-toolbar-refresh-glyph</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.toolbar.Toolbar<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$toolbar-menu-overflow-glyph</li>
+<li>$toolbar-menu-overflow-glyph-color</li>
+<li>$toolbar-scroller-bottom-glyph</li>
+<li>$toolbar-scroller-glyph-color</li>
+<li>$toolbar-scroller-glyph-font-size</li>
+<li>$toolbar-scroller-left-glyph</li>
+<li>$toolbar-scroller-right-glyph</li>
+<li>$toolbar-scroller-top-glyph</li>
+<li>$toolbar-tool-glyph-color</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.tree.View<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$tree-arrow-expanded-glyph</li>
+<li>$tree-arrow-expanded-glyph-color</li>
+<li>$tree-arrow-glyph</li>
+<li>$tree-arrow-glyph-color</li>
+<li>$tree-checkbox-checked-glyph</li>
+<li>$tree-checkbox-glyph</li>
+<li>$tree-checkbox-glyph-color</li>
+<li>$tree-collapse-glyph</li>
+<li>$tree-collapse-glyph-color</li>
+<li>$tree-expand-glyph</li>
+<li>$tree-expand-glyph-color</li>
+<li>$tree-folder-glyph</li>
+<li>$tree-folder-glyph-color</li>
+<li>$tree-folder-open-glyph</li>
+<li>$tree-folder-open-glyph-color</li>
+<li>$tree-glyph-color</li>
+<li>$tree-glyph-font-size</li>
+<li>$tree-leaf-glyph</li>
+<li>$tree-leaf-glyph-color</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.util.HashMap<ul>
+<li>Added<ul>
+<li>method<ul>
+<li>removeByKey</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.util.KeyMap<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>priority</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.util.KeyNav<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>priority</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.ux.form.MultiSelect<ul>
+<li>Added<ul>
+<li>config<ul>
+<li>pageSize</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.view.BoundList<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$boundlist-item-over-text-color</li>
+<li>$boundlist-item-selected-text-color</li>
+<li>$boundlist-item-text-color</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.view.Table<ul>
+<li>Added<ul>
+<li>property<ul>
+<li>actionRow</li>
+<li>actionableMode</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.window.MessageBox<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$messagebox-error-glyph</li>
+<li>$messagebox-error-glyph-color</li>
+<li>$messagebox-glyph-font-size</li>
+<li>$messagebox-info-glyph</li>
+<li>$messagebox-info-glyph-color</li>
+<li>$messagebox-question-glyph</li>
+<li>$messagebox-question-glyph-color</li>
+<li>$messagebox-warning-glyph</li>
+<li>$messagebox-warning-glyph-color</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.window.Toast<ul>
+<li>Modified<ul>
+<li>config<ul>
+<li>closable<ul>
+<li>5.1.1<ul>
+<li>default value is true</li>
+</ul>
+</li>
+<li>6.0.0<ul>
+<li>default value is false</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ext.window.Window<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$window-tool-focus-outline-color</li>
+<li>$window-tool-focus-outline-offset</li>
+<li>$window-tool-focus-outline-style</li>
+<li>$window-tool-focus-outline-width</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Global_CSS<ul>
+<li>Added<ul>
+<li>cssVar<ul>
+<li>$enable-font-icons</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="whats_new-_-api_diffs/600_classic_diff_-_removed">Removed<a class="quick-link" href="#whats_new-_-api_diffs/600_classic_diff_-_removed"></a></h2>
+<ul>
+<li>Ext.data.amf.Encoder</li>
+<li>Ext.data.amf.Packet</li>
+<li>Ext.data.amf.Proxy</li>
+<li>Ext.data.amf.Reader</li>
+<li>Ext.data.amf.RemotingMessage</li>
+<li>Ext.data.amf.XmlDecoder</li>
+<li>Ext.data.amf.XmlEncoder</li>
+<li>Ext.direct.AmfRemotingProvider</li>
+</ul>
+
+        </div>
+    </div>
+    <div id="footer">
+        <p class="di">
+            <a href="https://www.facebook.com/senchainc/" target="_blank"><img class="social" src="../../../../../assets/images/fb.png"/></a>
+            <a href="https://www.linkedin.com/company/sencha-inc" target="_blank"><img class="social" src="../../../../../assets/images/in.png"/></a>
+            <a href="https://twitter.com/Sencha" target="_blank"><img class="social" src="../../../../../assets/images/twt.png"/></a>
+            Ext JS   | <a href='https://www.sencha.com/legal/terms-of-use/' target='_blank'>Terms of Use</a>
+        </p>
+    </div>
+</div>        </div>
+    </div>
+
+    <h2 class="product-header">
+        <a href="../../../index.html">Ext JS 6.0.0 - Classic Toolkit</a>
+        <span data-tip="Product / Version Menu" class="header-product-title product-menu-btn-wrap tooltip tooltip-tl-bl">
+            <span class="fa fa-angle-down product-menu-btn"></span>
+            <div class="callout callout-b"></div>
+        </span>
+        <div id="peekaboo-input" class="peekaboo-input dn">
+            <input type="text" id="mobile-input" />
+        </div>
+    </h2>
+
+    <div id="product-tree-ct" class="hide">
+        <div id="product-version-tree-ct" class="hide"></div>
+    </div>
+
+    <div id="historyConfigPanel">
+        <div class="history-type-selector">
+            <input id="historyTypeCurrent" type="radio" name="historyType" value="current" checked="true" />
+            <label for="historyTypeCurrent">Current Product / Version</label><br>
+            <input id="historyTypeAll" type="radio" name="historyType" value="all" />
+            <label for="historyTypeAll">All</label><br>
+            <div id="history-label-toggle" class="relative ml2 o-50">
+                <input id="history-all-labels" type="checkbox" checked="true" />
+                <label for="history-all-labels">Show product details in the history bar</label>
+                <div class="mask"></div>
+            </div>
+            <span id="history-clear" class="icon-btn history-clear tooltip tooltip-tr-br" data-tip="Clear History">
+                <i class="fa fa-trash"></i>
+                <div class="callout callout-b"></div>
+            </span>
+        </div>
+        <div id="history-full-list" class="overflow-y-auto"></div>
+    </div>
+
+    <div id="search-history-panel"></div>
+
+    <div id="modal-placeholder" class="modal">
+        <span id="modal-close" >&times;</span>
+        <img id="modal-content">
+        <div id="modal-caption"></div>
+    </div>
+
+
+</body>
+    <script type="text/javascript" src="../../../../../assets/js/extjs-6.0.0-apiSearch.js"></script>
+    <script type="text/javascript" src="../../../../../assets/js/extjs-6.0.0-guideSearch.js"></script>
+<!--[if lt IE 9 ]>
+<script type="text/javascript" src="../../../../../assets/js/media-query-poly.js"></script>
+<style>
+    span.da-inline-fiddle-nav-fiddle.x-fa.fa-play-circle {
+        display: none;
+    }
+</style>
+<![endif]-->
+<script>
+    if (navigator.userAgent.indexOf("Safari") > -1) {
+        window.onpageshow = function(event) {
+            if (event.persisted) {
+                window.location.reload()
+            }
+        };
+    }
+</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-1396058-28', 'auto');
+    ga('send', 'pageview');
+</script>
+</html>

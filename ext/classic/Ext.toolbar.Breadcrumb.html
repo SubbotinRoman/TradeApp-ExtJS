@@ -1,0 +1,3169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ext.toolbar.Breadcrumb | Ext JS 6.0.0 </title>
+    <!--  Generated on August, 16 2019 at 14:57 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta property="og:image" content="../../../assets/images/sencha-200.png" />
+    <meta property="og:title" content="Ext.toolbar.Breadcrumb | Ext JS 6.0.0 " />
+    <meta property="og:description" content="Ext JS Classic - API documentation from Sencha" />
+    <meta property="og:site_name" content="Sencha Documentation" />
+    <meta property="og:url" content="" />
+    <meta name="description" content="Ext JS Classic - API documentation from Sencha">
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/create-app-html-app.css">
+
+
+</head>
+<body class="new-docs  is-api  has-guides   has-api tree-shown ">
+
+    <!-- SVG Sprite -->
+    <div style="height: 0; width: 0; position: absolute; visibility: hidden;" aria-hidden="true">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false">
+            <symbol id="ripply-scott" viewBox="0 0 100 100">
+                <circle id="ripple-shape" cx="1" cy="1" r="1" />
+            </symbol>
+        </svg>
+    </div>
+    <!-- /end sprite -->
+
+    <script type="text/javascript">
+        function getOS() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if(/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return 'ios';
+            } else if(userAgent.match(/Android/i)) {
+                return 'android';
+            }
+        }
+
+        var isIE8 = false;
+
+        document.body.className += ' ' + getOS();
+
+        window.DocsApp = window.DocsApp || {};
+        DocsApp.meta   = {"majorVer":"6","prodObj":{"3":{"link":"http://docs.sencha.com/{prod}/{ver}/#!/api/{page}"},"4":{"link":"http://docs.sencha.com/{prod}/{ver}/#!/api/{page}"},"title":"Ext JS","currentVersion":"7.0.0","toolkit":{"6":{"toolkits":["modern","classic"],"defaultToolkit":"modern"},"7":{"toolkits":["modern","classic"],"defaultToolkit":"modern"},"6.7.0-CE":{"toolkits":["modern"],"defaultToolkit":"modern"}},"productMenu":["7.0.0","6.7.0","6.7.0-CE","6.6.0-CE","6.6.0","6.5.3","6.5.2","6.5.1","6.5.0","6.2.1","6.2.0","6.0.2","6.0.1","6.0.0","5.1.4","5.1.3","5.1.2","5.1.1","5.1.0","5.0.1","5.0.0","4.2.6","4.1.3","4.0.7","3.4.0"],"guideSearchPartners":["cmd"],"hasVersions":true,"hasApi":true,"theme":{"5.0.0":"crisp","5.0.1":"crisp","5.1.0":"crisp","5.1.1":"crisp","5.1.2":"crisp","5.1.3":"crisp","5.1.4":"crisp","6.0.0":{"classic":"triton","modern":"triton"},"6.0.1":{"classic":"triton","modern":"triton"},"6.0.2":{"classic":"triton","modern":"triton"},"6.2.0":{"classic":"triton","modern":"triton"},"6.2.1":{"classic":"triton","modern":"triton"},"6.2.2":{"classic":"triton","modern":"triton"},"6.5.0":{"classic":"triton","modern":"material"},"6.5.1":{"classic":"triton","modern":"material"},"6.5.2":{"classic":"triton","modern":"material"},"6.5.3":{"classic":"triton","modern":"material"},"6.6.0":{"classic":"triton","modern":"material"},"6.6.0-CE":{"classic":"triton","modern":"material"},"6.7.0-CE":{"classic":"triton","modern":"material"},"6.7.0":{"classic":"triton","modern":"material"},"7.0.0":{"classic":"triton","modern":"material"}},"repo":"SDK","remoteUrl":"git@github.com:extjs/{repo}.git","addlRepos":["package-loader"],"addlRemoteUrls":"git@github.com:sencha/{repo}.git","remotes":{"7.0.0":{"branch":"ext-7.0.x"},"6.7.0":{"branch":"ext-6.7.x"},"6.7.0-CE":{"branch":"ext-6.6.x"},"6.6.0-CE":{"branch":"ext-6.6.x"},"6.6.0":{"branch":"ext-6.6.x"},"6.5.3":{"branch":"ext-6.5.x"},"6.5.2":{"branch":"ext-6.5.x"},"6.5.1":{"branch":"ext-6.5.1-docs"},"6.5.0":{"branch":"ext-6.5.0-docs"},"6.2.2":{"branch":"ext-6.2.x"},"6.2.1":{"branch":"ext-6.2.1-docs"},"6.2.0":{"branch":"ext-6.2.0-docs"},"6.0.2":{"branch":"ext-6.0.x"},"6.0.1":{"branch":"ext-6.0.1-docs"},"6.0.0":{"branch":"ext-6.0.0-docs"},"5.1.4":{"branch":"ext-5.1.x"},"5.1.3":{"branch":"ext-5.1.3-docs"},"5.1.2":{"branch":"ext-5.1.2-docs"},"5.1.1":{"branch":"ext-5.1.1-docs"},"5.1.0":{"branch":"ext-5.1.0-docs"},"5.0.1":{"branch":"ext-5.0.1-docs"},"5.0.0":{"branch":"ext-5.0.0-docs"}}},"hasApi":true,"hasVersions":true,"hasToolkits":2,"toolkits":["modern","classic"],"toolkit":"classic","hasGuides":true,"title":"Ext JS","version":"6.0.0","pageType":"api","product":"extjs","apiProduct":"extjs","apiVersion":"6.0.0","exceptions":{"touch":["2.3.1","2.2.1","2.1.1","2.0.1"],"extjs":["3.4.0","4.0.7","4.1.3","4.2.6"]},"searchPartnerVersions":{"cmd":{"7.0.0":"7.0.0","6.7.0":"7.0.0","6.7.0-CE":"7.0.0","6.6.0-CE":"7.0.0","6.6.0":"7.0.0","6.5.3":"7.0.0","6.5.2":"7.0.0","6.5.1":"7.0.0","6.5.0":"6.5.0","6.2.1":"6.5.0","6.2.0":"6.5.0","6.0.2":"6.5.0","6.0.1":"6.5.0","6.0.0":"6.5.0","5.1.4":"6.5.0","5.1.3":"6.5.0","5.1.2":"6.5.0","5.1.1":"6.5.0","5.1.0":"6.5.0","5.0.1":"6.5.0","5.0.0":"6.5.0","4.2.6":"6.5.0","4.1.3":"6.5.0","4.0.7":"6.5.0","3.4.0":"6.5.0"}},"navTreeName":"API.classic","myId":"Ext.toolbar.Breadcrumb","rootPath":"../","pageName":"Ext.toolbar.Breadcrumb","docsRootPath":"../../../","srcFiles":[{"pathText":"repos/SDK/ext/classic/classic/src/toolbar/Breadcrumb.js","path":"Breadcrumb.js.html"},{"pathText":"repos/SDK/ext/classic/theme-neutral/sass/src/toolbar/Breadcrumb.scss","path":"Breadcrumb.scss-1.html"},{"pathText":"repos/SDK/ext/classic/theme-neutral/sass/var/toolbar/Breadcrumb.scss","path":"Breadcrumb.scss.html"}]};
+    </script>
+    <!--[if IE 8]>
+    <script type='text/javascript'>
+        isIE8 = true;
+    </script>
+    <![endif]-->
+    <script type="text/javascript">
+        if (!isIE8) {
+            document.write('<script type=\"text/javascript\" src=\"../../../assets/js/prism.js\"><\/script>');
+        }
+        if (DocsApp.meta.hasGuides) {
+            document.write('<script type=\"text/javascript\" src=\"../../../assets/js/extjs-6.0.0-guidesTree.js\"><\/script>');
+        }
+        if (DocsApp.meta.hasApi) {
+            document.write('<script type=\"text/javascript\" src=\"../../../assets/js/extjs-6.0.0-apiTree.js\"><\/script>');
+        }
+    </script>
+    <script type="text/javascript" src="../../../assets/js/ace.js"></script>
+    <script type="text/javascript" src="../../../assets/js/create-app-html-app.js"></script>
+    <script type="text/javascript" src="../../../assets/js/productMenu.js"></script>
+
+    <div id="help-wrap">
+        <div class="help-header">
+            Docs Help
+            <div id="help-close" class="icon-btn">
+                <i class="fa fa-close"></i>
+            </div>
+        </div>
+        <div class="classText">
+            <div class="toc classMeta">
+                <h2>Contents</h2>
+                <a class="toc-page-h2" href="#terms-icons-and-labels">Terms, Icons, and Labels</a>
+                <a class="toc-page-h3" href="#access-levels">Access Levels</a>
+                <a class="toc-page-h3" href="#member-types">Member Types</a>
+                <a class="toc-page-h3" href="#member-syntax">Member Syntax</a>
+                <a class="toc-page-h3" href="#member-flags">Member Flags</a>
+                <a class="toc-page-h3" href="#class-icons">Class Icons</a>
+                <a class="toc-page-h3" href="#member-icons">Member Icons</a>
+                <a class="toc-page-h2" href="#navigation-and-features">Navigation and Features</a>
+                <a class="toc-page-h3" href="#class-member-quick-nav-menu">Class Member Quick-Nav Menu</a>
+                <a class="toc-page-h3" href="#getter-and-setter-methods">Getter and Setter Methods</a>
+                <a class="toc-page-h3" href="#history-bar">History Bar</a>
+                <a class="toc-page-h3" href="#search-and-filters">Search and Filters</a>
+                <a class="toc-page-h3" href="#api-doc-class-metadata">API Doc Class Metadata</a>
+                <a class="toc-page-h3" href="#expanding-and-collapsing-examples-and-class-members">Expanding and Collapsing Examples and Class Members</a>
+                <a class="toc-page-h3" href="#desktop-vs-mobile-view">Desktop -vs- Mobile View</a>
+                <a class="toc-page-h3" href="#viewing-the-class-source">Viewing the Class Source</a>
+            </div>
+            <h2 id="terms-icons-and-labels">Terms, Icons, and Labels</h2>
+            <p>Many classes have shortcut names used when creating (instantiating) a class with a
+                configuration object.  The shortcut name is referred to as an <code>alias</code> (or <code>xtype</code> if the
+                class extends Ext.Component).  The alias/xtype is listed next to the class name of
+                applicable classes for quick reference.</p>
+            <h3 id="access-levels">Access Levels</h3>
+            <p>Framework classes or their members may be specified as <code>private</code> or <code>protected</code>.  Else,
+                the class / member is <code>public</code>.  <code>Public</code>, <code>protected</code>, and <code>private</code> are access
+                descriptors used to convey how and when the class or class member should be used.</p>
+            <ul>
+                <li><p><strong>Public</strong> classes and class members are available for use by any other class or
+                    application code and may be relied upon as a stable and persistent within major product
+                    versions.  Public classes and members may safely be extended via a subclass.</p>
+                </li>
+                <li><p><strong>Protected</strong> class members are stable <code>public</code> members intended to be used by the
+                    owning class or its subclasses.  Protected members may safely be extended via a subclass.</p>
+                </li>
+                <li><p><strong>Private</strong> classes and class members are used internally by the framework and are not
+                    intended to be used by application developers.  Private classes and members may change or
+                    be omitted from the framework at any time without notice and should not be relied upon in
+                    application logic.</p>
+                </li>
+            </ul>
+            <h3 id="member-types">Member Types</h3>
+            <ul>
+                <li><strong>Config</strong> - The configuration options for a class.</li>
+                <li><strong>Property</strong> - Set once a class is instantiated. *See Read Only below.</li>
+                <li><strong>Method</strong> - Actions that can be performed by a class.  Methods should be read as
+                    instance methods and can only be called from a instance of a given class.  Static methods
+                    that can be called directly from the class itself will have a <code>static</code> label next to the
+                    method name.  *See Static below.</li>
+                <li><strong>Event</strong> - Events are specific to the framework event system allowing for classes to
+                    programmatically raise an event to be handled by one or more event handler methods.  DOM
+                    events, while handled by the framework event system, are not specifically described
+                    within the API documentation.  *For DOM events refer to the
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/Events">event reference</a> page from MDN.</li>
+                <li><strong>Theme Variable</strong> - Variables used by the visual theme engine employed by the
+                    framework.</li>
+                <li><strong>Theme Mixin</strong> - Functions used by the visual theme engine employed by the framework
+                    and may use values set in various Theme Variables.</li>
+            </ul>
+            <h3 id="member-syntax">Member Syntax</h3>
+            <p>Below is an example class member that we can disect to show the syntax of a class member
+                (the lookupComponent method as viewed from the Ext.button.Button class in this case).</p>
+            <div style="position: relative;" class="show-inherited show-protected members">
+                <div style="border: 1px solid #E4E4E4;" class="classmembers member-protected isNotStatic isInherited member-expanded" data-member-name="lookupComponent">
+                    <div class="collapse-toggle">
+                        <i class="fa fa-caret-right"></i>
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="source-class"><a href="javascript:void(0);">Ext.container.Container</a><div class="viewSource"><a href="javascript:void(0);"></a><a target="_blank" href="javascript:void(0);">view source</a></div></div>
+                    <div class="member-header">
+                        <a href="javascript:void(0);" class="member-name-link"><span data-ref="method-lookupComponent" class="member-name"><strong>lookup</strong>Component</span></a>
+                        <span class="params-list"> ( item )</span> : <span class="memberType">Ext.Component</span>
+                        <div class="member-tags"><span class="protected">protected</span></div>
+                    </div>
+                    <p>Called when a raw config object is added to this container either during initialization of the <a href="javascript:void(0);">items</a> config,
+                        or when new items are <a href="javascript:void(0);">added), or {@link #insert inserted</a>.</p>
+                    <p>This method converts the passed object into an instanced child component.</p>
+                    <p>This may be overridden in subclasses when special processing needs to be applied to child creation.</p>
+                    <div class="detail-header">Parameters</div>
+                    <p><span class="params-list">item</span> :
+                        <span class="memberType">&nbsp;Object</span>
+                    </p>
+                    <div class="params-desc"><p>The config object being added.</p></div>
+                    <div class="detail-header">Returns</div>
+                    <span style="margin-left:12px;" class="memberType">Ext.Component</span>
+                    <div class="return-desc"><p>The component to be added.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <p>Let's look at each part of the member row:</p>
+            <ul>
+                <li><strong>Expand/Collapse</strong> - On the left-hand size of the member row is a control used to
+                    expand and collapse each member row to show / hide member details.</li>
+                <li><strong>Member Name</strong> - The name of the class member (<code>lookupComponent</code> in this example)</li>
+                <li><strong>Method Param</strong> - Any required or optional params used by a method (or passed to an
+                    event handler method) will be listed next to the method name within parenthesis
+                    (<code>( item )</code> in this example)</li>
+                <li><strong>Return type</strong> - The class instance or javascript object returned by the method or
+                    property (<code>Ext.Component</code> in this case).  This may be omitted for methods that do not
+                    return anything other than <code>undefined</code> or may display as multiple possible values
+                    separated by a forward slash <code>/</code> signifying that what is returned may depend on the
+                    results of the method call (i.e. a method may return a Component if a get method calls is
+                    successful or <code>false</code> if unsuccessful which would be displayed as
+                    <code>Ext.Component/Boolean</code>).</li>
+                <li><strong>Flags</strong> - Any flags applicable to the member will be displayed next (<code>PROTECTED</code> in
+                    this example - see the Flags section below)</li>
+                <li><strong>Member Origin</strong> - On the right-hand side of the member row is the class where the
+                    member was initially described (<code>Ext.container.Container</code> in this example).  The source
+                    class will be displayed as a blue link if the member originates from the current class
+                    and gray if it is inherited from an ancestor or mixed-in class.</li>
+                <li><strong>Member Source</strong> - On the right-hand side below the member origin class is a link to
+                    view the member's source (<code>view source</code> in the example)</li>
+                <li><strong>Params List</strong> - Each param for a class method will be listed using the same name
+                    found above in parenthesis, the type of class or object expected, and a description of
+                    the param (<code>item : Object</code> in the example).</li>
+                <li><strong>Returns</strong> - If a class returns a value other than <code>undefined</code> a "Returns" section
+                    will note the type of class or object returned and a description (<code>Ext.Component</code> in the
+                    example)</li>
+                <li><strong>Since</strong> (<em>not shown in the example</em>) - Some members will show which version of the
+                    product the member was first introduced (i.e. <code>Available since 3.4.0</code> - <em>not pictured in
+                        the example</em>) just after the member description</li>
+                <li><strong>Default</strong> (<em>not shown in the example</em>) - Configs often show the default config value
+                    to be applied to a class instance if not overridden (i.e. <code>Defaults to: false</code>)</li>
+            </ul>
+            <h3 id="member-flags">Member Flags</h3>
+            <p>The API documentation uses a number of flags to further commnicate the class member's
+                function and intent.  The label may be represented by a text label, an abbreviation, or
+                an icon.</p>
+            <ul>
+                <li><strong>Required</strong> - Required config when instantiating a class</li>
+                <li><strong>Bindable</strong> - The config has a setter which allows this config to be set via ViewModel
+                    binding</li>
+                <li><strong>Read Only</strong> - The property may be read, but cannot be used to configure /
+                    re-configure a class instance at runtime</li>
+                <li><strong>Singleton</strong> - Singleton classes are instantiated immediately once defined and may not
+                    be instantiated manually</li>
+                <li><strong>Static</strong> - A static method or property is a method or property belonging to the class
+                    itself, not an instance of the class</li>
+                <li><strong>Chainable</strong> - Refers to methods that return the class instance back when called.<br>This enables chained method calls like: <code>classInstance.method1().method2().etc();</code></li>
+                <li><strong>Deprecated</strong> - A class or member that is scheduled for removal in a future
+                    framework version and is provided in the current version for backwards compatibility.<br>Deprecated classes and members will have a message directing you to the preferred class /
+                    method going forward.</li>
+                <li><strong>Removed</strong> - A removed class or member that exists in documentation only as a
+                    reference for users upgrading between framework versions</li>
+                <li><strong>Template</strong> - A method defined within a base class designed to be overridden by
+                    subclasses</li>
+                <li><strong>Abstract</strong> - A class or member may be be defined as abstract.  Abstract classes and
+                    members establish a class structure and provide limited, if any, code.  Class-specific
+                    code will be furnished via overrides in subclasses.</li>
+                <li><strong>Preventable</strong> - Events marked preventable will not fire if <code>false</code> is returned from
+                    an event handler</li>
+            </ul>
+            <h3 id="class-icons">Class Icons</h3>
+            <p><span class="icon-demo class-icon fa fa-cube"></span> - Indicates a framework class  </p>
+            <p><span class="icon-demo singleton-icon fa fa-cube"></span> - A singleton framework class. *See the
+                singleton flag for more information  </p>
+            <p><span class="icon-demo component-icon fa fa-gear"></span> - A component-type framework class (any
+                class within the Ext JS framework that extends Ext.Component)  </p>
+            <p><span class="icon-demo display-new"></span> - Indicates that the class, member, or guide
+                is new in the currently viewed version</p>
+            <h3 id="member-icons">Member Icons</h3>
+            <p><span class="icon-demo fa fa-cubes"></span> - Indicates a class member of type <code>config</code>  </p>
+            <p><span class="icon-demo fa fa-book"></span> - Indicates a class member of type <code>property</code>  </p>
+            <p><span class="icon-demo fa fa-object-group"></span> - Indicates a class member of type
+                <code>method</code>  </p>
+            <p><span class="icon-demo fa fa-bolt"></span> - Indicates a class member of type <code>event</code>  </p>
+            <p><span class="icon-demo fa fa-paint-brush"></span> - Indicates a class member of type
+                <code>theme variable</code>  </p>
+            <p><span class="icon-demo fa fa-tint"></span> - Indicates a class member of type
+                <code>theme mixin</code>  </p>
+            <p><span class="icon-demo display-new"></span> - Indicates that the class, member, or guide
+                is new in the currently viewed version</p>
+            <h2 id="navigation-and-features">Navigation and Features</h2>
+            <h3 id="class-member-quick-nav-menu">Class Member Quick-Nav Menu</h3>
+            <p>Just below the class name on an API doc page is a row of buttons corresponding to the
+                types of members owned by the current class.  Each button shows a count of members by
+                type (this count is updated as filters are applied).  Clicking the button will navigate
+                you to that member section.  Hovering over the member-type button will reveal a popup
+                menu of all members of that type for quick navigation.</p>
+            <h3 id="getter-and-setter-methods">Getter and Setter Methods</h3>
+            <p>Getting and setter methods that correlate to a class config option will show up in the
+                methods section as well as in the configs section of both the API doc and the member-type
+                menus just beneath the config they work with.  The getter and setter method documentation
+                will be found in the config row for easy reference.</p>
+            <h3 id="history-bar">History Bar</h3>
+            <p>Your page history is kept in localstorage and displayed (using the available real estate)
+                just below the top title bar.  By default, the only search results shown are the pages
+                matching the product / version you're currently viewing.  You can expand what is
+                displayed by clicking on the <span class="icon-demo history-config"></span> button on the
+                right-hand side of the history bar and choosing the "All" radio option.  This will show
+                all recent pages in the history bar for all products / versions.</p>
+            <p>Within the history config menu you will also see a listing of your recent page visits.
+                The results are filtered by the "Current Product / Version" and "All" radio options.
+                Clicking on the <span class="icon-demo history-clear"></span> button will clear the history bar as
+                well as the history kept in local storage.</p>
+            <p>If "All" is selected in the history config menu the checkbox option for "Show product
+                details in the history bar" will be enabled.  When checked, the product/version for each
+                historic page will show alongside the page name in the history bar.  Hovering the cursor
+                over the page names in the history bar will also show the product/version as a tooltip.</p>
+            <h3 id="search-and-filters">Search and Filters</h3>
+            <p>Both API docs and guides can be searched for using the search field at the top of the
+                page.</p>
+            <p>On API doc pages there is also a filter input field that filters the member rows
+                using the filter string.  In addition to filtering by string you can filter the class
+                members by access level, inheritance, and read only.  This is done using the checkboxes at the top of
+                the page.</p>
+            <p>The checkbox at the bottom of the API class navigation tree filters the class list to
+                include or exclude private classes.</p>
+            <p>Clicking on an empty search field will show your last 10 searches for quick navigation.</p>
+            <h3 id="api-doc-class-metadata">API Doc Class Metadata</h3>
+            <p>Each API doc page (with the exception of Javascript primitives pages) has a menu view of
+                metadata relating to that class.  This metadata view will have one or more of the
+                following:</p>
+            <ul>
+                <li><strong>Alternate Name</strong> - One or more additional class name synonymns (in Ext JS 6.0.0 the
+                    <code>Ext.button.Button</code> class has an alternate class name of <code>Ext.Button</code>).  Alternate class
+                    names are commonly maintained for backward compatibility.</li>
+                <li><strong>Hierarchy</strong> - The hierararchy view lists the inheritance chain of the current class
+                    up through its ancestor classes up to the root base class.</li>
+                <li><strong>Mixins</strong> - A list of classes that are mixed into the current class</li>
+                <li><strong>Inherited Mixins</strong> - A list of classes that are mixed into an ancestor of the current
+                    class</li>
+                <li><strong>Requires</strong> - All classes required to be defined for the class to be instantiated</li>
+                <li><strong>Uses</strong> - A list of classes potentially used by the class at some point in its
+                    lifecycle, but not necessarily requried for the class to initially be instantiated</li>
+                <li><strong>Subclasses</strong> - Classes that extend the current class</li>
+            </ul>
+            <h3 id="expanding-and-collapsing-examples-and-class-members">Expanding and Collapsing Examples and Class Members</h3>
+            <p>Runnable examples (Fiddles) are expanded on a page by default.  You can collapse and
+                expand example code blocks individually using the arrow on the top-left of the code
+                block.  You can also toggle the collapse state of all examples using the toggle button on
+                the top-right of the page.  The toggle-all state will be remembered between page loads.</p>
+            <p>Class members are collapsed on a page by default.  You can expand and collapse members
+                using the arrow icon on the left of the member row or globally using the expand /
+                collapse all toggle button top-right.</p>
+            <h3 id="desktop-vs-mobile-view">Desktop -vs- Mobile View</h3>
+            <p>Viewing the docs on narrower screens or browsers will result in a view optimized for a
+                smaller form factor.  The primary differences between the desktop and "mobile" view are:</p>
+            <ul>
+                <li>Global navigation will be located in a menu on the left-hand side accessible via the
+                    hamburger menu icon.  The menu houses the following (on most pages):<ul>
+                        <li>The name of the current product (as a link to the product landing page)</li>
+                        <li>The Sencha icon used to navigate back to the documentation home page</li>
+                        <li>The product menu drop-down button</li>
+                        <li>Tabs of navigation trees for the API docs and guides</li>
+                    </ul>
+                </li>
+                <li>Current context navigation and tools is located on the right-hand side accessible via
+                    the gear icon.  The context menu houses teh following:<ul>
+                        <li>The global search input field</li>
+                        <li>(<em>API doc</em>) A "Filters" tab with the member filter, expand / collapse all examples
+                            button, expand / collapse all member rows button, the access level filter checkboxes,
+                            and the counts of each member</li>
+                        <li>(<em>API doc</em>) A "Related Classes" tab containing the menu of metadata related to the
+                            current class</li>
+                        <li>(<em>Guides</em>) The table of contents for the guide</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3 id="viewing-the-class-source">Viewing the Class Source</h3>
+            <p>The class source can be viewed by clicking on the class name at the top of an API doc
+                page.  The source for class members can be viewed by clicking on the "view source" link
+                on the right-hand side of the member row.</p>
+    
+        </div>
+    </div>
+
+    <div id="header">
+        <div class="home-link">
+            <a href="http://docs.sencha.com"><span class="fa fa-book"></span></a>
+        </div>
+        <div class="logo">
+            <a href="https://www.sencha.com"><img height="32" src="../../../assets/images/sencha_logo_thumb.png"/></a>
+        </div>
+        <span id="mobile-main-nav-menu-btn" class="fa fa-bars"></span>
+        <span data-tip="Product / Version Menu" class="fa fa-angle-down product-menu-btn product-menu-btn-wrap tooltip-tl-bl tooltip landing-product-menu-btn">
+            <div class="callout callout-b"></div>
+        </span>
+                <a class="page-title " href="" target="_blank">Ext.toolbar.Breadcrumb</a>
+
+        <span id="mobile-context-menu-btn" class="fa fa-cog"></span>
+    </div>
+
+    <div id="centerContent">
+        <div id="history-nav">
+            <span id="history-config" class="icon-btn history-config tooltip tooltip-tr-br" data-tip="Configure / Clear History">
+                <i class="fa fa-history"></i>
+                <div class="callout callout-b"></div>
+            </span>
+        </div>
+        <div id="class-tree-ct" class="class-tree">
+            <h2 class="product-header">
+                <div class="home-link">
+                    <a href="http://docs.sencha.com"><span class="fa fa-book"></span></a>
+                </div>
+                <div class="logo">
+                    <a href="https://www.sencha.com"><img src="../../../assets/images/sencha_logo1x.png"/></a>
+                </div>
+                <a href="../index.html">Ext JS 6.0.0 - Classic Toolkit</a>
+                <span data-tip="Product / Version Menu" class="fa fa-angle-down product-menu-btn product-menu-btn-wrap tooltip tooltip-tl-bl"><div class="callout callout-b"></div></span>
+            </h2>
+            <div id="tree-header" class="pre-load">
+                <div id="hide-class-tree" class="icon-btn">
+                    <i class="fa fa-close"></i>
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+            <div id="tree-scroller">
+                <div id="tree" class="show-private show-protected is-tree ">
+                    <div id="tree-sub-header"></div>
+                </div>
+                    <div class="private-class-toggle-ct">
+                        <label for="private-class-toggle" class="pointer gray">Show private classes</label>
+                        <input id="private-class-toggle" type="checkbox" name="privateClassToggle" />
+                    </div>
+            </div>
+        </div>
+
+        <a href="#" id="back-to-top">
+            <div class="fa fa-angle-up"></div>
+            <br>
+            top
+        </a>
+
+        <div id="rightMembers">
+<div id="member-toolbars">
+    <div id="member-class-name">
+            <span class='icon'>
+                <i class="title-decoration component-type fa fa-cog"></i>
+            </span>
+
+        <h1 class='class'>
+                <span class="multi-src-btn">Ext.toolbar.Breadcrumb</span>
+                <span class='alias'>
+                        xtype:
+                    breadcrumb</span>
+        </h1>
+    </div>
+</div>
+<div class="context-menu-ct">
+    <div class="context-header">
+        <div id="hide-context-menu" class="fa fa-close"></div>
+    </div>
+
+    <div class="search">
+        <form autocomplete="off">
+                <div class="toolkit-search-filter-ct">
+                    <span id="modern-search-filter" class="tooltip tooltip-tr-br active" data-tip="Include Modern Search Results"><div class="callout callout-b"></div></span>
+                    <span id="classic-search-filter" class="tooltip tooltip-tr-br active" data-tip="Include Classic Search Results"><div class="callout callout-b"></div></span>
+                </div>
+    
+            <input type="text" type="search" placeholder="search" id="searchtext" tabindex="1">
+            <i id="filtersubmit" class="fa fa-search"></i>
+            <span id="help-btn" data-tip="Docs Help" class="icon-btn tooltip tooltip-tr-br"><div class="callout callout-b"></div>
+                <i class="fa fa-question fa-inverse"></i>
+            </span>
+        </form>
+    </div>
+    <div class="context-menu-content navigation-parent-ct">
+        <div class="context-menu-tabs">
+            <div id="filterTab" class="toolbarHeaderButton active-tab">
+                Filters
+            </div>
+            <div id="relatedClassesTab" class="toolbarHeaderButton">
+                Related Classes
+            </div>
+        </div>
+        <div id="context-menu-filters-header" class="sub-nav-header sub-nav-header-expanded">
+            <span>Filters</span>
+            <i class="fa fa-chevron-down" style="z-index: 0; transform: matrix(-1, 0, 0, -1, 0, 0);"></i>
+        </div>
+        <div id="filters-ct">
+            <div id="toolbar">
+                <div class="memberFilter">
+                    <input placeholder="Filter members..." type="search" id="member-filter-field" name="member-filter-field">
+                    <div id="toggleExamples" class="icon-btn tooltip tooltip-tr-br" data-collapse="Collapse All Examples" data-expand="Expand All Examples">
+                        <i id="toggle-examples-indicator" class="fa fa-code"></i>
+                        <div class="callout callout-b"></div>
+                    </div>
+                    <div id="toggleAll" class="icon-btn tooltip tooltip-tr-br" data-toggle="Expand All Members">
+                        <i id="toggle-members-indicator" class="fa fa-plus"></i>
+                        <div class="callout callout-b"></div>
+                    </div>
+                </div>
+                <div id="member-display">
+                    <div class="member-access-display">
+                        <label>
+                            <input id="publicCheckbox" type="checkbox" value="member-public" checked=true/>Public
+                        </label>
+                    </div>
+                    <div class="member-access-display">
+                        <label>
+                            <input id="protectedCheckbox" type="checkbox" value="member-protected" checked=true/>Protected
+                        </label>
+                    </div>
+                    <div class="member-access-display">
+                        <label>
+                            <input id="privateCheckbox" type="checkbox" value="member-private"/>Private
+                        </label>
+                    </div>
+                    <div class="member-access-display">
+                        <label>
+                            <input id="inheritedCheckbox" type="checkbox" value="member-inherited" checked=true/>Inherited
+                        </label>
+                    </div>
+                    <div class="member-access-display">
+                        <label>
+                            <input id="readonlyCheckbox" type="checkbox" value="member-readonly" checked=true/>Read Only
+                        </label>
+                    </div>
+                </div>
+                <div id="member-types-menu" class="member-types-menu dib">
+                        <a href="#configs" id="configs-button-link">
+                            <div id="configs-nav-btn" class="toolbarButton disabled">
+                                <i class="fa fa-cubes"></i>
+                                <span class="member-type-btn-text">configs</span>
+                                <div id="configs-count" class="nav-btn-count"></div>
+                                <div class="nav-btn-mask"></div>
+                            </div>
+                        </a>
+                        <a href="#properties" id="properties-button-link"><div id="properties-nav-btn" class="toolbarButton disabled">
+                            <i class="fa fa-book"></i>
+                            <span class="member-type-btn-text">properties</span>
+                            <div id="properties-count" class="nav-btn-count"></div>
+                            <div class="nav-btn-mask"></div>
+                        </div></a>
+                        <a href="#methods" id="methods-button-link"><div id="methods-nav-btn" class="toolbarButton disabled">
+                            <i class="fa fa-object-group"></i>
+                            <span class="member-type-btn-text">methods</span>
+                            <div id="methods-count" class="nav-btn-count"></div>
+                            <div class="nav-btn-mask"></div>
+                        </div></a>
+                        <a href="#events" id="events-button-link"><div id="events-nav-btn" class="toolbarButton disabled">
+                            <i class="fa fa-bolt"></i>
+                            <span class="member-type-btn-text">events</span>
+                            <div id="events-count" class="nav-btn-count"></div>
+                            <div class="nav-btn-mask"></div>
+                        </div></a>
+                        <a href="#vars" id="vars-button-link"><div id="vars-nav-btn" class="toolbarButton disabled">
+                            <i class="fa fa-paint-brush"></i>
+                            <span class="member-type-btn-text">theme variables</span>
+                            <div id="vars-count" class="nav-btn-count"></div>
+                            <div class="nav-btn-mask"></div>
+                        </div></a>
+                        <a href="#sass-mixins" id="sass-mixins-button-link"><div id="sass-mixins-nav-btn" class="toolbarButton disabled">
+                            <i class="fa fa-tint"></i>
+                            <span class="member-type-btn-text">theme mixins</span>
+                            <div id="sass-mixins-count" class="nav-btn-count"></div>
+                            <div class="nav-btn-mask"></div>
+                        </div></a>
+                </div>
+            </div>
+        </div>
+        <div id="context-menu-related-header" class="sub-nav-header sub-nav-ct-collapsed">
+            <span>Related Classes</span>
+            <i class="fa fa-chevron-down" style="z-index: 0; transform: matrix(-1, 0, 0, -1, 0, 0);"></i>
+        </div>
+        <div id="related-classes-context-ct" class="hide">
+            <!-- We'll programmatically copy in the related classes elements here on page load -->
+        </div>
+    </div>
+</div>
+<div id="class-body-wrap" class="class-body-wrap">
+    <div class="body-wrap-inner">
+        <div id="classText" class="classText">
+            <div class="classHead">
+                <div class="classMeta">
+                        <div class="classMetaColumn">
+                            <h3>Hierarchy</h3>
+                            <div class="list"><a href='Ext.Base.html'>Ext.Base</a><div class = "hierarchy pl2"><a href='Ext.Component.html'>Ext.Component</a><div class = "hierarchy pl2">Ext.Container<div class="hierarchy pl2">Ext.toolbar.Breadcrumb</div></div></div></div>
+                        </div>
+                        <div class="classMetaColumn">
+                            <h3>Mixins</h3>
+                            <p class="list">Ext.util.FocusableContainer</p>
+                        </div>
+                        <div class="classMetaColumn">
+                            <h3>Inherited Mixins</h3>
+                            <p class="list"><a href='Ext.Mixin.html'>Ext.Mixin</a><br><a href='Ext.mixin.Accessible.html'>Ext.mixin.Accessible</a><br><a href='Ext.mixin.Bindable.html'>Ext.mixin.Bindable</a><br><a href='Ext.mixin.ComponentDelegation.html'>Ext.mixin.ComponentDelegation</a><br><a href='Ext.mixin.Container.html'>Ext.mixin.Container</a><br><a href='Ext.mixin.Identifiable.html'>Ext.mixin.Identifiable</a><br><a href='Ext.mixin.Inheritable.html'>Ext.mixin.Inheritable</a><br><a href='Ext.mixin.Observable.html'>Ext.mixin.Observable</a><br><a href='Ext.mixin.Queryable.html'>Ext.mixin.Queryable</a><br><a href='Ext.state.Stateful.html'>Ext.state.Stateful</a><br><a href='Ext.util.Animate.html'>Ext.util.Animate</a><br><a href='Ext.util.ElementContainer.html'>Ext.util.ElementContainer</a><br><a href='Ext.util.Floating.html'>Ext.util.Floating</a><br><a href='Ext.util.Focusable.html'>Ext.util.Focusable</a><br><a href='Ext.util.KeyboardInteractive.html'>Ext.util.KeyboardInteractive</a><br><a href='Ext.util.Observable.html'>Ext.util.Observable</a><br><a href='Ext.util.Positionable.html'>Ext.util.Positionable</a><br><a href='Ext.util.Renderable.html'>Ext.util.Renderable</a></p>
+                        </div>
+                        <div class="classMetaColumn">
+                            <h3>Requires</h3>
+                            <p class="list"><a href='Ext.data.TreeStore.html'>Ext.data.TreeStore</a><br><a href='Ext.button.Split.html'>Ext.button.Split</a></p>
+                        </div>
+                </div>
+            </div>
+                <h2>Summary</h2>
+                <p>A toolbar that displays hierarchical data from a <a href="Ext.data.TreeStore.html">Ext.data.TreeStore</a>
+as a trail of breadcrumb buttons.  Each button represents a node in the store.  A click
+on a button will &quot;select&quot; that node in the tree.  Non-leaf nodes will display their
+child nodes on a dropdown menu of the corresponding button in the breadcrumb trail,
+and a click on an item in the menu will trigger selection of the corresponding child
+node.</p>
+<p>The selection can be set programmatically  using <a href="#method-setSelection">setSelection</a>, or retrieved
+using <a href="#method-getSelection">getSelection</a>.</p>
+
+        </div>
+        <div class="no-visible-members-warning">No members found using the current filters</div>
+        <div class="members">
+                <div id="configs-ct">
+                    <h2 id="configs" class="type">configs</h2>
+                    <a class="link underline-hover blue" name="configs"></a>
+
+                        <div id="optional-configs-ct">
+                            <div class="type-sub-category-title">Optional Configs</div>
+    <div id="cfg-buttonUI" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="buttonUI"  data-accessor="true">
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-buttonUI">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#cfg-buttonUI" class="member-name-link"><span data-ref="cfg-buttonUI" class="member-name">buttonUI</span></a>
+
+
+                    <span class="memberType"> : <a href='String.html'>String</a></span>
+            <div class="member-tags">
+                    <span class="bindable full-flag">bindable</span>
+                    <span class="bindable mini-flag">bind</span>
+            </div>
+        </h2>
+
+            <p>Button UI to use for breadcrumb items.  Use <a href="#sass-mixin-extjs-breadcrumb-ui">extjs-breadcrumb-ui</a> to
+add special styling to the breadcrumb arrows</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">&#39;plain-toolbar&#39;</pre></p>
+            <div id="method-getButtonUI" class="classmembers member accessor-method auto-accessor-method isGetter" data-member-name="getButtonUI" data-accessor="true">
+                <div class="collapse-toggle">
+                    <i class="fa fa-caret-right"></i>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <h2 class="member-header">
+                    <a data-ref="method-getButtonUI" href="#method-getButtonUI" class="member-name">
+                        getButtonUI
+                    </a>
+                        :
+                            <span class="memberType"><a href='String.html'>String</a></span>
+                </h2>
+                <p>Returns the value of buttonUI</p>
+                <h3 class="detail-header">Returns</h3>
+                <p><span class="memberType"><a href='String.html'>String</a></span></p>
+            </div>
+            <div id="method-setButtonUI" class="classmembers member accessor-method auto-accessor-method isSetter" data-member-name="setButtonUI" data-accessor="true">
+                <div class="collapse-toggle">
+                    <i class="fa fa-caret-right"></i>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <h2 class="member-header">
+                    <a data-ref="method-setButtonUI" href="#method-setButtonUI" class="member-name">
+                        setButtonUI
+                    </a>
+                    <span class="params-list">(buttonUI)</span>
+                </h2>
+                <p>Sets the value of buttonUI</p>
+                <h3 class="detail-header">Parameters</h3>
+                <p><span class="params-list">buttonUI</span> :
+                        <span class="memberType">&nbsp;<a href='String.html'>String</a></span>
+                </p>
+            </div>
+    </div>
+    <div id="cfg-displayField" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="displayField"  data-accessor="true">
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-displayField">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#cfg-displayField" class="member-name-link"><span data-ref="cfg-displayField" class="member-name">displayField</span></a>
+
+
+                    <span class="memberType"> : <a href='String.html'>String</a></span>
+            <div class="member-tags">
+                    <span class="bindable full-flag">bindable</span>
+                    <span class="bindable mini-flag">bind</span>
+            </div>
+        </h2>
+
+            <p>The name of the field in the data model to display in the navigation items of
+this breadcrumb toolbar</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">&#39;text&#39;</pre></p>
+            <div id="method-getDisplayField" class="classmembers member accessor-method auto-accessor-method isGetter" data-member-name="getDisplayField" data-accessor="true">
+                <div class="collapse-toggle">
+                    <i class="fa fa-caret-right"></i>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <h2 class="member-header">
+                    <a data-ref="method-getDisplayField" href="#method-getDisplayField" class="member-name">
+                        getDisplayField
+                    </a>
+                        :
+                            <span class="memberType"><a href='String.html'>String</a></span>
+                </h2>
+                <p>Returns the value of displayField</p>
+                <h3 class="detail-header">Returns</h3>
+                <p><span class="memberType"><a href='String.html'>String</a></span></p>
+            </div>
+            <div id="method-setDisplayField" class="classmembers member accessor-method auto-accessor-method isSetter" data-member-name="setDisplayField" data-accessor="true">
+                <div class="collapse-toggle">
+                    <i class="fa fa-caret-right"></i>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <h2 class="member-header">
+                    <a data-ref="method-setDisplayField" href="#method-setDisplayField" class="member-name">
+                        setDisplayField
+                    </a>
+                    <span class="params-list">(displayField)</span>
+                </h2>
+                <p>Sets the value of displayField</p>
+                <h3 class="detail-header">Parameters</h3>
+                <p><span class="params-list">displayField</span> :
+                        <span class="memberType">&nbsp;<a href='String.html'>String</a></span>
+                </p>
+            </div>
+    </div>
+    <div id="cfg-overflowHandler" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="overflowHandler"  data-accessor="true">
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-overflowHandler">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#cfg-overflowHandler" class="member-name-link"><span data-ref="cfg-overflowHandler" class="member-name">overflowHandler</span></a>
+
+
+                    <span class="memberType"> : <a href='String.html'>String</a></span>
+            <div class="member-tags">
+                    <span class="bindable full-flag">bindable</span>
+                    <span class="bindable mini-flag">bind</span>
+            </div>
+        </h2>
+
+            <p>The overflowHandler for this Breadcrumb:</p>
+<ul>
+<li><code>null</code> - hidden overflow</li>
+<li><code>&#39;scroller&#39;</code> to render left/right scroller buttons on either side of the breadcrumb</li>
+<li><code>&#39;menu&#39;</code> to render the overflowing buttons as items of an overflow menu.</li>
+</ul>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">null</pre></p>
+            <div id="method-getOverflowHandler" class="classmembers member accessor-method auto-accessor-method isGetter" data-member-name="getOverflowHandler" data-accessor="true">
+                <div class="collapse-toggle">
+                    <i class="fa fa-caret-right"></i>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <h2 class="member-header">
+                    <a data-ref="method-getOverflowHandler" href="#method-getOverflowHandler" class="member-name">
+                        getOverflowHandler
+                    </a>
+                        :
+                            <span class="memberType"><a href='String.html'>String</a></span>
+                </h2>
+                <p>Returns the value of overflowHandler</p>
+                <h3 class="detail-header">Returns</h3>
+                <p><span class="memberType"><a href='String.html'>String</a></span></p>
+            </div>
+            <div id="method-setOverflowHandler" class="classmembers member accessor-method auto-accessor-method isSetter" data-member-name="setOverflowHandler" data-accessor="true">
+                <div class="collapse-toggle">
+                    <i class="fa fa-caret-right"></i>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <h2 class="member-header">
+                    <a data-ref="method-setOverflowHandler" href="#method-setOverflowHandler" class="member-name">
+                        setOverflowHandler
+                    </a>
+                    <span class="params-list">(overflowHandler)</span>
+                </h2>
+                <p>Sets the value of overflowHandler</p>
+                <h3 class="detail-header">Parameters</h3>
+                <p><span class="params-list">overflowHandler</span> :
+                        <span class="memberType">&nbsp;<a href='String.html'>String</a></span>
+                </p>
+            </div>
+    </div>
+    <div id="cfg-selection" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="selection"  data-accessor="true">
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-selection">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#cfg-selection" class="member-name-link"><span data-ref="cfg-selection" class="member-name">selection</span></a>
+
+
+                    <span class="memberType"> : <a href='Ext.data.TreeModel.html'>Ext.data.TreeModel</a> / <a href='String.html'>String</a></span>
+            <div class="member-tags">
+                    <span class="bindable full-flag">bindable</span>
+                    <span class="bindable mini-flag">bind</span>
+            </div>
+        </h2>
+
+            <p>The selected node, or <code>&quot;root&quot;</code> to select the root node</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">&#39;root&#39;</pre></p>
+    <div id="method-getSelection" class="classmembers member member-public isNotStatic  is-not-inherited    accessor-method explicit-accessor-method isGetter   " data-member-name="getSelection" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-method-getSelection">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#method-getSelection" class="member-name-link"><span data-ref="method-getSelection" class="member-name">getSelection</span></a>
+
+                    <span class="memberType">Ext.data.TreeModel</span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Returns the currently selected <a href="Ext.data.TreeModel.html">Ext.data.TreeModel</a>.</p>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType">Ext.data.TreeModel</span>
+                <div class="return-desc"><p>node The selected node (or null if there is no
+selection).</p>
+</div>
+
+    </div>
+    <div id="method-setSelection" class="classmembers member member-public isNotStatic  is-not-inherited     accessor-method explicit-accessor-method isSetter  " data-member-name="setSelection" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-method-setSelection">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#method-setSelection" class="member-name-link"><span data-ref="method-setSelection" class="member-name">setSelection</span></a>
+                <span class="params-list">
+                    (
+node
+
+                    )
+                            :
+                </span>
+
+                    <span class="memberType">Ext.toolbar.Breadcrumb</span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Selects the passed <a href="Ext.data.TreeModel.html">Ext.data.TreeModel</a> in the breadcrumb component.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-setSelection--node">node</span> :
+                            <span class="memberType">&nbsp;Ext.data.TreeModel</span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The node in the breadcrumb <a href="#cfg-store">store</a> to
+select as the active node.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType">Ext.toolbar.Breadcrumb</span>
+                <div class="return-desc"><p>this The breadcrumb component</p>
+</div>
+
+    </div>
+    </div>
+    <div id="cfg-showIcons" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="showIcons"  data-accessor="true">
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-showIcons">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#cfg-showIcons" class="member-name-link"><span data-ref="cfg-showIcons" class="member-name">showIcons</span></a>
+
+
+                    <span class="memberType"> : <a href='Boolean.html'>Boolean</a></span>
+            <div class="member-tags">
+                    <span class="bindable full-flag">bindable</span>
+                    <span class="bindable mini-flag">bind</span>
+            </div>
+        </h2>
+
+            <p>Controls whether or not icons of tree nodes are displayed in the breadcrumb
+buttons.  There are 3 possible values for this config:</p>
+<ol>
+<li><p>unspecified (<code>null</code>) - the default value. In this mode only icons that are
+specified in the tree data using (<a href="Ext.data.NodeInterface.html#cfg-icon">icon</a>
+or <a href="Ext.data.NodeInterface.html#cfg-iconCls">iconCls</a> will be displayed, but the
+default &quot;folder&quot; and &quot;leaf&quot; icons will not be displayed.</p>
+</li>
+<li><p><code>true</code> - Icons specified in the tree data will be displayed, and the default
+&quot;folder&quot; and &quot;leaf&quot; icons will be displayed for nodes that do not specify
+an <code>icon</code> or <code>iconCls</code>.</p>
+</li>
+<li><p><code>false</code> - No icons will be displayed in the breadcrumb buttons, only text.</p>
+</li>
+</ol>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">null</pre></p>
+            <div id="method-getShowIcons" class="classmembers member accessor-method auto-accessor-method isGetter" data-member-name="getShowIcons" data-accessor="true">
+                <div class="collapse-toggle">
+                    <i class="fa fa-caret-right"></i>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <h2 class="member-header">
+                    <a data-ref="method-getShowIcons" href="#method-getShowIcons" class="member-name">
+                        getShowIcons
+                    </a>
+                        :
+                            <span class="memberType"><a href='Boolean.html'>Boolean</a></span>
+                </h2>
+                <p>Returns the value of showIcons</p>
+                <h3 class="detail-header">Returns</h3>
+                <p><span class="memberType"><a href='Boolean.html'>Boolean</a></span></p>
+            </div>
+            <div id="method-setShowIcons" class="classmembers member accessor-method auto-accessor-method isSetter" data-member-name="setShowIcons" data-accessor="true">
+                <div class="collapse-toggle">
+                    <i class="fa fa-caret-right"></i>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <h2 class="member-header">
+                    <a data-ref="method-setShowIcons" href="#method-setShowIcons" class="member-name">
+                        setShowIcons
+                    </a>
+                    <span class="params-list">(showIcons)</span>
+                </h2>
+                <p>Sets the value of showIcons</p>
+                <h3 class="detail-header">Parameters</h3>
+                <p><span class="params-list">showIcons</span> :
+                        <span class="memberType">&nbsp;<a href='Boolean.html'>Boolean</a></span>
+                </p>
+            </div>
+    </div>
+    <div id="cfg-showMenuIcons" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="showMenuIcons"  data-accessor="true">
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-showMenuIcons">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#cfg-showMenuIcons" class="member-name-link"><span data-ref="cfg-showMenuIcons" class="member-name">showMenuIcons</span></a>
+
+
+                    <span class="memberType"> : <a href='Boolean.html'>Boolean</a></span>
+            <div class="member-tags">
+                    <span class="bindable full-flag">bindable</span>
+                    <span class="bindable mini-flag">bind</span>
+            </div>
+        </h2>
+
+            <p>Controls whether or not icons of tree nodes are displayed in the breadcrumb
+menu items. There are 3 possible values for this config:</p>
+<ol>
+<li><p>unspecified (<code>null</code>) - the default value. In this mode only icons that are
+specified in the tree data using (<a href="Ext.data.NodeInterface.html#cfg-icon">icon</a>
+or <a href="Ext.data.NodeInterface.html#cfg-iconCls">iconCls</a> will be displayed, but the
+default &quot;folder&quot; and &quot;leaf&quot; icons will not be displayed.</p>
+</li>
+<li><p><code>true</code> - Icons specified in the tree data will be displayed, and the default
+&quot;folder&quot; and &quot;leaf&quot; icons will be displayed for nodes that do not specify
+an <code>icon</code> or <code>iconCls</code>.</p>
+</li>
+<li><p><code>false</code> - No icons will be displayed on the breadcrumb menu items, only text.</p>
+</li>
+</ol>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">null</pre></p>
+            <div id="method-getShowMenuIcons" class="classmembers member accessor-method auto-accessor-method isGetter" data-member-name="getShowMenuIcons" data-accessor="true">
+                <div class="collapse-toggle">
+                    <i class="fa fa-caret-right"></i>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <h2 class="member-header">
+                    <a data-ref="method-getShowMenuIcons" href="#method-getShowMenuIcons" class="member-name">
+                        getShowMenuIcons
+                    </a>
+                        :
+                            <span class="memberType"><a href='Boolean.html'>Boolean</a></span>
+                </h2>
+                <p>Returns the value of showMenuIcons</p>
+                <h3 class="detail-header">Returns</h3>
+                <p><span class="memberType"><a href='Boolean.html'>Boolean</a></span></p>
+            </div>
+            <div id="method-setShowMenuIcons" class="classmembers member accessor-method auto-accessor-method isSetter" data-member-name="setShowMenuIcons" data-accessor="true">
+                <div class="collapse-toggle">
+                    <i class="fa fa-caret-right"></i>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <h2 class="member-header">
+                    <a data-ref="method-setShowMenuIcons" href="#method-setShowMenuIcons" class="member-name">
+                        setShowMenuIcons
+                    </a>
+                    <span class="params-list">(showMenuIcons)</span>
+                </h2>
+                <p>Sets the value of showMenuIcons</p>
+                <h3 class="detail-header">Parameters</h3>
+                <p><span class="params-list">showMenuIcons</span> :
+                        <span class="memberType">&nbsp;<a href='Boolean.html'>Boolean</a></span>
+                </p>
+            </div>
+    </div>
+    <div id="cfg-store" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="store"  data-accessor="true">
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-store">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#cfg-store" class="member-name-link"><span data-ref="cfg-store" class="member-name">store</span></a>
+
+
+                    <span class="memberType"> : <a href='Ext.data.TreeStore.html'>Ext.data.TreeStore</a></span>
+            <div class="member-tags">
+                    <span class="bindable full-flag">bindable</span>
+                    <span class="bindable mini-flag">bind</span>
+            </div>
+        </h2>
+
+            <p>The TreeStore that this breadcrumb toolbar should use as its data source</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">null</pre></p>
+            <div id="method-getStore" class="classmembers member accessor-method auto-accessor-method isGetter" data-member-name="getStore" data-accessor="true">
+                <div class="collapse-toggle">
+                    <i class="fa fa-caret-right"></i>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <h2 class="member-header">
+                    <a data-ref="method-getStore" href="#method-getStore" class="member-name">
+                        getStore
+                    </a>
+                        :
+                            <span class="memberType"><a href='Ext.data.TreeStore.html'>Ext.data.TreeStore</a></span>
+                </h2>
+                <p>Returns the value of store</p>
+                <h3 class="detail-header">Returns</h3>
+                <p><span class="memberType"><a href='Ext.data.TreeStore.html'>Ext.data.TreeStore</a></span></p>
+            </div>
+            <div id="method-setStore" class="classmembers member accessor-method auto-accessor-method isSetter" data-member-name="setStore" data-accessor="true">
+                <div class="collapse-toggle">
+                    <i class="fa fa-caret-right"></i>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <h2 class="member-header">
+                    <a data-ref="method-setStore" href="#method-setStore" class="member-name">
+                        setStore
+                    </a>
+                    <span class="params-list">(store)</span>
+                </h2>
+                <p>Sets the value of store</p>
+                <h3 class="detail-header">Parameters</h3>
+                <p><span class="params-list">store</span> :
+                        <span class="memberType">&nbsp;<a href='Ext.data.TreeStore.html'>Ext.data.TreeStore</a></span>
+                </p>
+            </div>
+    </div>
+    <div id="cfg-useSplitButtons" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="useSplitButtons"  data-accessor="true">
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-useSplitButtons">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#cfg-useSplitButtons" class="member-name-link"><span data-ref="cfg-useSplitButtons" class="member-name">useSplitButtons</span></a>
+
+
+                    <span class="memberType"> : <a href='Boolean.html'>Boolean</a></span>
+            <div class="member-tags">
+                    <span class="bindable full-flag">bindable</span>
+                    <span class="bindable mini-flag">bind</span>
+            </div>
+        </h2>
+
+            <p><code>false</code> to use regular <a href="Ext.button.Button.html">Ext.button.Button</a>s instead of <a href="Ext.button.Split.html">Ext.button.Split</a>.  When <code>true</code>, a click on the body of a button
+will navigate to the specified node, and a click on the arrow will show a menu
+containing the the child nodes.  When <code>false</code>, the only mode of navigation is
+the menu, since a click anywhere on the button will show the menu.</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">true</pre></p>
+            <div id="method-getUseSplitButtons" class="classmembers member accessor-method auto-accessor-method isGetter" data-member-name="getUseSplitButtons" data-accessor="true">
+                <div class="collapse-toggle">
+                    <i class="fa fa-caret-right"></i>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <h2 class="member-header">
+                    <a data-ref="method-getUseSplitButtons" href="#method-getUseSplitButtons" class="member-name">
+                        getUseSplitButtons
+                    </a>
+                        :
+                            <span class="memberType"><a href='Boolean.html'>Boolean</a></span>
+                </h2>
+                <p>Returns the value of useSplitButtons</p>
+                <h3 class="detail-header">Returns</h3>
+                <p><span class="memberType"><a href='Boolean.html'>Boolean</a></span></p>
+            </div>
+            <div id="method-setUseSplitButtons" class="classmembers member accessor-method auto-accessor-method isSetter" data-member-name="setUseSplitButtons" data-accessor="true">
+                <div class="collapse-toggle">
+                    <i class="fa fa-caret-right"></i>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <h2 class="member-header">
+                    <a data-ref="method-setUseSplitButtons" href="#method-setUseSplitButtons" class="member-name">
+                        setUseSplitButtons
+                    </a>
+                    <span class="params-list">(useSplitButtons)</span>
+                </h2>
+                <p>Sets the value of useSplitButtons</p>
+                <h3 class="detail-header">Parameters</h3>
+                <p><span class="params-list">useSplitButtons</span> :
+                        <span class="memberType">&nbsp;<a href='Boolean.html'>Boolean</a></span>
+                </p>
+            </div>
+    </div>
+                        </div>
+                </div>
+
+
+                <div id="properties-ct">
+                    <h2 id="properties" class="type">properties</h2>
+                    <a name="properties"></a>
+                        <div id="instance-properties-ct">
+                            <div class="type-sub-category-title ">Instance Properties</div>
+    <div id="property-buttons" class="classmembers member member-private isNotStatic  is-not-inherited       " data-member-name="buttons" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-property-buttons">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#property-buttons" class="member-name-link"><span data-ref="property-buttons" class="member-name">buttons</span></a>
+
+
+                    <span class="memberType"> : <a href='Ext.button.Split.html'>Ext.button.Split[]</a></span>
+            <div class="member-tags">
+                    <span class="private full-flag">private</span>
+                    <span class="private mini-flag">pri</span>
+            </div>
+        </h2>
+
+            <p>Internal cache of buttons that are re-purposed as the items of this container
+as navigation occurs.</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">[]</pre></p>
+    </div>
+                        </div>
+
+                </div>
+
+                <div id="methods-ct">
+                    <h2 id="methods" class="type">methods</h2>
+                    <a name="methods"></a>
+                        <div id="instance-methods-ct">
+                            <div class="type-sub-category-title">Instance Methods</div>
+    <div id="method-_onButtonClick" class="classmembers member member-private isNotStatic  is-not-inherited       " data-member-name="_onButtonClick" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-method-_onButtonClick">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#method-_onButtonClick" class="member-name-link"><span data-ref="method-_onButtonClick" class="member-name">_onButtonClick</span></a>
+                <span class="params-list">
+                    (
+button, e
+
+                    )
+                </span>
+
+
+            <div class="member-tags">
+                    <span class="private full-flag">private</span>
+                    <span class="private mini-flag">pri</span>
+            </div>
+        </h2>
+
+            <p>Handles a click on a breadcrumb button</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-_onButtonClick--button">button</span> :
+                            <span class="memberType">&nbsp;Ext.button.Split</span>
+                        
+                    </p>
+                    <div class="params-desc"></div>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-_onButtonClick--e">e</span> :
+                            <span class="memberType">&nbsp;Ext.event.Event</span>
+                        
+                    </p>
+                    <div class="params-desc"></div>
+
+                </div>
+
+    </div>
+    <div id="method-_onMenuBeforeShow" class="classmembers member member-private isNotStatic  is-not-inherited       " data-member-name="_onMenuBeforeShow" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-method-_onMenuBeforeShow">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#method-_onMenuBeforeShow" class="member-name-link"><span data-ref="method-_onMenuBeforeShow" class="member-name">_onMenuBeforeShow</span></a>
+                <span class="params-list">
+                    (
+menu
+
+                    )
+                            :
+                </span>
+
+                    <span class="memberType">Boolean</span>
+
+            <div class="member-tags">
+                    <span class="private full-flag">private</span>
+                    <span class="private mini-flag">pri</span>
+            </div>
+        </h2>
+
+            <p>Handles the <code><a href="#event-beforeshow">beforeshow</a></code> event of a button menu</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-_onMenuBeforeShow--menu">menu</span> :
+                            <span class="memberType">&nbsp;Ext.menu.Menu</span>
+                        
+                    </p>
+                    <div class="params-desc"></div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType">Boolean</span>
+                <div class="return-desc"></div>
+
+    </div>
+    <div id="method-_onMenuClick" class="classmembers member member-private isNotStatic  is-not-inherited       " data-member-name="_onMenuClick" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-method-_onMenuClick">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#method-_onMenuClick" class="member-name-link"><span data-ref="method-_onMenuClick" class="member-name">_onMenuClick</span></a>
+                <span class="params-list">
+                    (
+menu, item, e
+
+                    )
+                </span>
+
+
+            <div class="member-tags">
+                    <span class="private full-flag">private</span>
+                    <span class="private mini-flag">pri</span>
+            </div>
+        </h2>
+
+            <p>Handles a click on a button menu</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-_onMenuClick--menu">menu</span> :
+                            <span class="memberType">&nbsp;Ext.menu.Menu</span>
+                        
+                    </p>
+                    <div class="params-desc"></div>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-_onMenuClick--item">item</span> :
+                            <span class="memberType">&nbsp;Ext.menu.Item</span>
+                        
+                    </p>
+                    <div class="params-desc"></div>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-_onMenuClick--e">e</span> :
+                            <span class="memberType">&nbsp;Ext.event.Event</span>
+                        
+                    </p>
+                    <div class="params-desc"></div>
+
+                </div>
+
+    </div>
+    <div id="placeholder-accessor-getButtonUI" class="classmembers member member-public isNotStatic  is-not-inherited      isAutoGetter " data-member-name="getButtonUI" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-buttonUI">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#placeholder-accessor-getButtonUI" class="member-name-link"><span data-ref="placeholder-accessor-getButtonUI" class="member-name">getButtonUI</span></a>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            see: <a href="#method-getButtonUI">buttonUI</a>
+    </div>
+    <div id="placeholder-accessor-getDisplayField" class="classmembers member member-public isNotStatic  is-not-inherited      isAutoGetter " data-member-name="getDisplayField" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-displayField">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#placeholder-accessor-getDisplayField" class="member-name-link"><span data-ref="placeholder-accessor-getDisplayField" class="member-name">getDisplayField</span></a>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            see: <a href="#method-getDisplayField">displayField</a>
+    </div>
+    <div id="placeholder-accessor-getOverflowHandler" class="classmembers member member-public isNotStatic  is-not-inherited      isAutoGetter " data-member-name="getOverflowHandler" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-overflowHandler">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#placeholder-accessor-getOverflowHandler" class="member-name-link"><span data-ref="placeholder-accessor-getOverflowHandler" class="member-name">getOverflowHandler</span></a>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            see: <a href="#method-getOverflowHandler">overflowHandler</a>
+    </div>
+    <div id="placeholder-simple-getSelection" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="getSelection" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-selection">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#placeholder-simple-getSelection" class="member-name-link"><span data-ref="placeholder-simple-getSelection" class="member-name">getSelection</span></a>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            see: <a href="#method-getSelection">selection</a>
+    </div>
+    <div id="placeholder-accessor-getShowIcons" class="classmembers member member-public isNotStatic  is-not-inherited      isAutoGetter " data-member-name="getShowIcons" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-showIcons">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#placeholder-accessor-getShowIcons" class="member-name-link"><span data-ref="placeholder-accessor-getShowIcons" class="member-name">getShowIcons</span></a>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            see: <a href="#method-getShowIcons">showIcons</a>
+    </div>
+    <div id="placeholder-accessor-getShowMenuIcons" class="classmembers member member-public isNotStatic  is-not-inherited      isAutoGetter " data-member-name="getShowMenuIcons" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-showMenuIcons">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#placeholder-accessor-getShowMenuIcons" class="member-name-link"><span data-ref="placeholder-accessor-getShowMenuIcons" class="member-name">getShowMenuIcons</span></a>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            see: <a href="#method-getShowMenuIcons">showMenuIcons</a>
+    </div>
+    <div id="placeholder-accessor-getStore" class="classmembers member member-public isNotStatic  is-not-inherited      isAutoGetter " data-member-name="getStore" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-store">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#placeholder-accessor-getStore" class="member-name-link"><span data-ref="placeholder-accessor-getStore" class="member-name">getStore</span></a>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            see: <a href="#method-getStore">store</a>
+    </div>
+    <div id="placeholder-accessor-getUseSplitButtons" class="classmembers member member-public isNotStatic  is-not-inherited      isAutoGetter " data-member-name="getUseSplitButtons" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-useSplitButtons">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#placeholder-accessor-getUseSplitButtons" class="member-name-link"><span data-ref="placeholder-accessor-getUseSplitButtons" class="member-name">getUseSplitButtons</span></a>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            see: <a href="#method-getUseSplitButtons">useSplitButtons</a>
+    </div>
+    <div id="placeholder-accessor-setButtonUI" class="classmembers member member-public isNotStatic  is-not-inherited       isAutoSetter" data-member-name="setButtonUI" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-buttonUI">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#placeholder-accessor-setButtonUI" class="member-name-link"><span data-ref="placeholder-accessor-setButtonUI" class="member-name">setButtonUI</span></a>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            see: <a href="#method-setButtonUI">buttonUI</a>
+    </div>
+    <div id="placeholder-accessor-setDisplayField" class="classmembers member member-public isNotStatic  is-not-inherited       isAutoSetter" data-member-name="setDisplayField" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-displayField">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#placeholder-accessor-setDisplayField" class="member-name-link"><span data-ref="placeholder-accessor-setDisplayField" class="member-name">setDisplayField</span></a>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            see: <a href="#method-setDisplayField">displayField</a>
+    </div>
+    <div id="placeholder-accessor-setOverflowHandler" class="classmembers member member-public isNotStatic  is-not-inherited       isAutoSetter" data-member-name="setOverflowHandler" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-overflowHandler">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#placeholder-accessor-setOverflowHandler" class="member-name-link"><span data-ref="placeholder-accessor-setOverflowHandler" class="member-name">setOverflowHandler</span></a>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            see: <a href="#method-setOverflowHandler">overflowHandler</a>
+    </div>
+    <div id="placeholder-setSelection" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="setSelection" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-selection">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#placeholder-setSelection" class="member-name-link"><span data-ref="placeholder-setSelection" class="member-name">setSelection</span></a>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            see: <a href="#method-setSelection">selection</a>
+    </div>
+    <div id="placeholder-accessor-setShowIcons" class="classmembers member member-public isNotStatic  is-not-inherited       isAutoSetter" data-member-name="setShowIcons" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-showIcons">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#placeholder-accessor-setShowIcons" class="member-name-link"><span data-ref="placeholder-accessor-setShowIcons" class="member-name">setShowIcons</span></a>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            see: <a href="#method-setShowIcons">showIcons</a>
+    </div>
+    <div id="placeholder-accessor-setShowMenuIcons" class="classmembers member member-public isNotStatic  is-not-inherited       isAutoSetter" data-member-name="setShowMenuIcons" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-showMenuIcons">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#placeholder-accessor-setShowMenuIcons" class="member-name-link"><span data-ref="placeholder-accessor-setShowMenuIcons" class="member-name">setShowMenuIcons</span></a>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            see: <a href="#method-setShowMenuIcons">showMenuIcons</a>
+    </div>
+    <div id="placeholder-accessor-setStore" class="classmembers member member-public isNotStatic  is-not-inherited       isAutoSetter" data-member-name="setStore" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-store">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#placeholder-accessor-setStore" class="member-name-link"><span data-ref="placeholder-accessor-setStore" class="member-name">setStore</span></a>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            see: <a href="#method-setStore">store</a>
+    </div>
+    <div id="placeholder-accessor-setUseSplitButtons" class="classmembers member member-public isNotStatic  is-not-inherited       isAutoSetter" data-member-name="setUseSplitButtons" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-cfg-useSplitButtons">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#placeholder-accessor-setUseSplitButtons" class="member-name-link"><span data-ref="placeholder-accessor-setUseSplitButtons" class="member-name">setUseSplitButtons</span></a>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            see: <a href="#method-setUseSplitButtons">useSplitButtons</a>
+    </div>
+                        </div>
+
+                </div>
+
+                <div id="events-ct">
+                    <h2 id="events" class="type">events</h2>
+                    <a name="events"></a>
+    <div id="event-change" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="change" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-event-change">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#event-change" class="member-name-link"><span data-ref="event-change" class="member-name">change</span></a>
+                <span class="params-list">
+                    (
+this, node, prevNode, eOpts
+
+                    )
+                </span>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Fires when the user changes the selected record. In contrast to the <a href="#event-selectionchange">selectionchange</a> event, this does
+<em>not</em> fire at render time, only in response to user activity.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="event-change--this">this</span> :
+                            <span class="memberType">&nbsp;Ext.toolbar.Breadcrumb</span>
+                        
+                    </p>
+                    <div class="params-desc"></div>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="event-change--node">node</span> :
+                            <span class="memberType">&nbsp;Ext.data.TreeModel</span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The selected node.</p>
+</div>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="event-change--prevNode">prevNode</span> :
+                            <span class="memberType">&nbsp;Ext.data.TreeModel</span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The previously selected node.</p>
+</div>
+
+                </div>
+
+                        <div class="param-row">
+                            <p><span class="params-list">eOpts</span> : <span class="memberType"><a href="Object.html">Object</a></span></p>
+                            <div class="params-desc"><p>The options object passed to <a href="Ext.util.Observable.html">Ext.util.Observable.addListener</a>.</p></div>
+                        </div>
+    </div>
+    <div id="event-selectionchange" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="selectionchange" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.js.html#Ext.toolbar.Breadcrumb-event-selectionchange">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#event-selectionchange" class="member-name-link"><span data-ref="event-selectionchange" class="member-name">selectionchange</span></a>
+                <span class="params-list">
+                    (
+this, node, prevNode, eOpts
+
+                    )
+                </span>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Fires when the selected node changes. At render time, this event will fire
+indicating that the configured <a href="#cfg-selection">selection</a> has been selected.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="event-selectionchange--this">this</span> :
+                            <span class="memberType">&nbsp;Ext.toolbar.Breadcrumb</span>
+                        
+                    </p>
+                    <div class="params-desc"></div>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="event-selectionchange--node">node</span> :
+                            <span class="memberType">&nbsp;Ext.data.TreeModel</span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The selected node.</p>
+</div>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="event-selectionchange--prevNode">prevNode</span> :
+                            <span class="memberType">&nbsp;Ext.data.TreeModel</span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The previously selected node.</p>
+</div>
+
+                </div>
+
+                        <div class="param-row">
+                            <p><span class="params-list">eOpts</span> : <span class="memberType"><a href="Object.html">Object</a></span></p>
+                            <div class="params-desc"><p>The options object passed to <a href="Ext.util.Observable.html">Ext.util.Observable.addListener</a>.</p></div>
+                        </div>
+    </div>
+                </div>
+
+                <div id="vars-ct">
+                    <h2 id="vars" class="type">theme variables</h2>
+                    <a name="vars"></a>
+    <div id="css_var-S-$breadcrumb-arrow-expanded-glyph" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-arrow-expanded-glyph" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-arrow-expanded-glyph">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-arrow-expanded-glyph" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-arrow-expanded-glyph" class="member-name">$breadcrumb-arrow-expanded-glyph</span></a>
+
+
+                    <span class="memberType"> : <a href='String.html'>String</a> / list</span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Glyph for the &quot;expanded arrow&quot; icon when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$fa-var-angle-down $breadcrumb-glyph-font-size $font-icon-font-family</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-arrow-expanded-glyph-color" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-arrow-expanded-glyph-color" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-arrow-expanded-glyph-color">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-arrow-expanded-glyph-color" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-arrow-expanded-glyph-color" class="member-name">$breadcrumb-arrow-expanded-glyph-color</span></a>
+
+
+                    <span class="memberType"> : color</span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The color to use for the &quot;expanded arrow&quot; icon when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$breadcrumb-arrow-glyph-color</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-arrow-glyph" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-arrow-glyph" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-arrow-glyph">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-arrow-glyph" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-arrow-glyph" class="member-name">$breadcrumb-arrow-glyph</span></a>
+
+
+                    <span class="memberType"> : <a href='String.html'>String</a> / list</span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Glyph for the &quot;arrow&quot; icon when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$fa-var-angle-right $breadcrumb-glyph-font-size $font-icon-font-family</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-arrow-glyph-color" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-arrow-glyph-color" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-arrow-glyph-color">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-arrow-glyph-color" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-arrow-glyph-color" class="member-name">$breadcrumb-arrow-glyph-color</span></a>
+
+
+                    <span class="memberType"> : color</span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The color to use for the &quot;arrow&quot; icon when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$breadcrumb-glyph-color</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-arrow-width" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-arrow-width" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-arrow-width">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-arrow-width" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-arrow-width" class="member-name">$breadcrumb-arrow-width</span></a>
+
+
+                    <span class="memberType"> : <a href='Number.html'>Number</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The width of breadcrumb arrows when <a href="#cfg-useSplitButtons">useSplitButtons</a> is <code>false</code></p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$button-small-split-width</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-button-spacing" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-button-spacing" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-button-spacing">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-button-spacing" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-button-spacing" class="member-name">$breadcrumb-button-spacing</span></a>
+
+
+                    <span class="memberType"> : <a href='Number.html'>Number</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The space between the breadcrumb buttons</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">0px</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-button-ui" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-button-ui" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-button-ui">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-button-ui" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-button-ui" class="member-name">$breadcrumb-button-ui</span></a>
+
+
+                    <span class="memberType"> : <a href='String.html'>String</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The UI of buttons that are used in the &quot;default&quot; breadcrumb UI</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">&#39;default-toolbar&#39;</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-classic-scrollers" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-classic-scrollers" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-classic-scrollers">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-classic-scrollers" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-classic-scrollers" class="member-name">$breadcrumb-classic-scrollers</span></a>
+
+
+                    <span class="memberType"> : <a href='Boolean.html'>Boolean</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p><code>true</code> to use classic-style scroller buttons.  When <code>true</code> scroller buttons are given their
+hover state by changing their background-position,  When <code>false</code> scroller buttons are
+given their hover state by applying opacity.</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$toolbar-classic-scrollers</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-folder-glyph" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-folder-glyph" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-folder-glyph">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-folder-glyph" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-folder-glyph" class="member-name">$breadcrumb-folder-glyph</span></a>
+
+
+                    <span class="memberType"> : <a href='String.html'>String</a> / list</span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Glyph for the &quot;folder&quot; icon when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$fa-var-folder-o $breadcrumb-glyph-font-size $font-icon-font-family</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-folder-glyph-color" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-folder-glyph-color" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-folder-glyph-color">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-folder-glyph-color" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-folder-glyph-color" class="member-name">$breadcrumb-folder-glyph-color</span></a>
+
+
+                    <span class="memberType"> : color</span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The color to use for the &quot;folder&quot; icon when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$breadcrumb-glyph-color</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-folder-icon" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-folder-icon" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-folder-icon">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-folder-icon" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-folder-icon" class="member-name">$breadcrumb-folder-icon</span></a>
+
+
+                    <span class="memberType"> : <a href='String.html'>String</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The background-image for the default &quot;folder&quot; icon</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">&#39;tree/folder&#39;</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-folder-open-glyph" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-folder-open-glyph" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-folder-open-glyph">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-folder-open-glyph" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-folder-open-glyph" class="member-name">$breadcrumb-folder-open-glyph</span></a>
+
+
+                    <span class="memberType"> : <a href='String.html'>String</a> / list</span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Glyph for the &quot;open folder&quot; icon when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$fa-var-folder-open-o $breadcrumb-glyph-font-size $font-icon-font-family</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-folder-open-glyph-color" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-folder-open-glyph-color" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-folder-open-glyph-color">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-folder-open-glyph-color" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-folder-open-glyph-color" class="member-name">$breadcrumb-folder-open-glyph-color</span></a>
+
+
+                    <span class="memberType"> : color</span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The color to use for the &quot;open folder&quot; icon when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$breadcrumb-folder-glyph-color</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-folder-open-icon" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-folder-open-icon" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-folder-open-icon">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-folder-open-icon" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-folder-open-icon" class="member-name">$breadcrumb-folder-open-icon</span></a>
+
+
+                    <span class="memberType"> : <a href='String.html'>String</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The background-image for the default &quot;open folder&quot; icon</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">&#39;tree/folder-open&#39;</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-glyph-color" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-glyph-color" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-glyph-color">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-glyph-color" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-glyph-color" class="member-name">$breadcrumb-glyph-color</span></a>
+
+
+                    <span class="memberType"> : color</span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The color to use for breadcrumb icons when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$button-toolbar-glyph-color</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-glyph-font-size" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-glyph-font-size" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-glyph-font-size">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-glyph-font-size" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-glyph-font-size" class="member-name">$breadcrumb-glyph-font-size</span></a>
+
+
+                    <span class="memberType"> : <a href='Number.html'>Number</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The font size to use for breadcrumb icons when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">16px</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-include-menu-active-arrow" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-include-menu-active-arrow" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-include-menu-active-arrow">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-include-menu-active-arrow" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-include-menu-active-arrow" class="member-name">$breadcrumb-include-menu-active-arrow</span></a>
+
+
+                    <span class="memberType"> : <a href='Boolean.html'>Boolean</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p><code>true</code> to include a separate background-image for menu arrows when a breadcrumb button&#39;s
+menu is open</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">true</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-include-split-over-arrow" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-include-split-over-arrow" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-include-split-over-arrow">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-include-split-over-arrow" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-include-split-over-arrow" class="member-name">$breadcrumb-include-split-over-arrow</span></a>
+
+
+                    <span class="memberType"> : <a href='Boolean.html'>Boolean</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p><code>true</code> to include a separate background-image for split arrows when a breadcrumb button&#39;s
+arrow is hovered</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">true</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-leaf-glyph" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-leaf-glyph" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-leaf-glyph">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-leaf-glyph" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-leaf-glyph" class="member-name">$breadcrumb-leaf-glyph</span></a>
+
+
+                    <span class="memberType"> : <a href='String.html'>String</a> / list</span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Glyph for the &quot;leaf&quot; icon when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$fa-var-file-o $breadcrumb-glyph-font-size $font-icon-font-family</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-leaf-glyph-color" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-leaf-glyph-color" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-leaf-glyph-color">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-leaf-glyph-color" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-leaf-glyph-color" class="member-name">$breadcrumb-leaf-glyph-color</span></a>
+
+
+                    <span class="memberType"> : color</span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The color to use for the &quot;leaf&quot; icon when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$breadcrumb-glyph-color</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-leaf-icon" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-leaf-icon" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-leaf-icon">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-leaf-icon" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-leaf-icon" class="member-name">$breadcrumb-leaf-icon</span></a>
+
+
+                    <span class="memberType"> : <a href='String.html'>String</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The background-image for the default &quot;leaf&quot; icon</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">&#39;tree/leaf&#39;</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-scroller-border-color" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-scroller-border-color" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-scroller-border-color">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-scroller-border-color" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-scroller-border-color" class="member-name">$breadcrumb-scroller-border-color</span></a>
+
+
+                    <span class="memberType"> : color</span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The border-color of Breadcrumb scrollers</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$toolbar-scroller-border-color</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-scroller-border-width" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-scroller-border-width" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-scroller-border-width">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-scroller-border-width" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-scroller-border-width" class="member-name">$breadcrumb-scroller-border-width</span></a>
+
+
+                    <span class="memberType"> : <a href='Number.html'>Number</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The border-width of Breadcrumb scrollers</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$toolbar-scroller-border-width</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-scroller-bottom-margin" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-scroller-bottom-margin" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-scroller-bottom-margin">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-scroller-bottom-margin" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-scroller-bottom-margin" class="member-name">$breadcrumb-scroller-bottom-margin</span></a>
+
+
+                    <span class="memberType"> : <a href='Number.html'>Number</a> / list</span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The margin of &quot;bottom&quot; Breadcrumb scroller buttons</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$toolbar-scroller-bottom-margin</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-scroller-cursor" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-scroller-cursor" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-scroller-cursor">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-scroller-cursor" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-scroller-cursor" class="member-name">$breadcrumb-scroller-cursor</span></a>
+
+
+                    <span class="memberType"> : <a href='String.html'>String</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The cursor of Breadcrumb scrollers</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$toolbar-scroller-cursor</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-scroller-cursor-disabled" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-scroller-cursor-disabled" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-scroller-cursor-disabled">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-scroller-cursor-disabled" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-scroller-cursor-disabled" class="member-name">$breadcrumb-scroller-cursor-disabled</span></a>
+
+
+                    <span class="memberType"> : <a href='String.html'>String</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The cursor of disabled Breadcrumb scrollers</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$toolbar-scroller-cursor-disabled</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-scroller-height" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-scroller-height" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-scroller-height">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-scroller-height" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-scroller-height" class="member-name">$breadcrumb-scroller-height</span></a>
+
+
+                    <span class="memberType"> : <a href='Number.html'>Number</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The height of Breadcrumb scrollers</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$toolbar-scroller-height</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-scroller-left-margin" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-scroller-left-margin" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-scroller-left-margin">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-scroller-left-margin" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-scroller-left-margin" class="member-name">$breadcrumb-scroller-left-margin</span></a>
+
+
+                    <span class="memberType"> : <a href='Number.html'>Number</a> / list</span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The margin of &quot;left&quot; Breadcrumb scroller buttons</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$toolbar-scroller-left-margin</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-scroller-opacity" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-scroller-opacity" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-scroller-opacity">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-scroller-opacity" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-scroller-opacity" class="member-name">$breadcrumb-scroller-opacity</span></a>
+
+
+                    <span class="memberType"> : <a href='Number.html'>Number</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The opacity of Breadcrumb scroller buttons. Only applicable when
+<a href="#var-$breadcrumb-classic-scrollers">$breadcrumb-classic-scrollers</a> is <code>false</code>.</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$toolbar-scroller-opacity</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-scroller-opacity-disabled" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-scroller-opacity-disabled" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-scroller-opacity-disabled">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-scroller-opacity-disabled" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-scroller-opacity-disabled" class="member-name">$breadcrumb-scroller-opacity-disabled</span></a>
+
+
+                    <span class="memberType"> : <a href='Number.html'>Number</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The opacity of disabled Breadcrumb scroller buttons. Only applicable when
+<a href="#var-$breadcrumb-classic-scrollers">$breadcrumb-classic-scrollers</a> is <code>false</code>.</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$toolbar-scroller-opacity-disabled</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-scroller-opacity-over" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-scroller-opacity-over" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-scroller-opacity-over">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-scroller-opacity-over" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-scroller-opacity-over" class="member-name">$breadcrumb-scroller-opacity-over</span></a>
+
+
+                    <span class="memberType"> : <a href='Number.html'>Number</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The opacity of hovered Breadcrumb scroller buttons. Only applicable when
+<a href="#var-$breadcrumb-classic-scrollers">$breadcrumb-classic-scrollers</a> is <code>false</code>.</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$toolbar-scroller-opacity-over</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-scroller-opacity-pressed" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-scroller-opacity-pressed" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-scroller-opacity-pressed">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-scroller-opacity-pressed" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-scroller-opacity-pressed" class="member-name">$breadcrumb-scroller-opacity-pressed</span></a>
+
+
+                    <span class="memberType"> : <a href='Number.html'>Number</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The opacity of pressed Breadcrumb scroller buttons. Only applicable when
+<a href="#var-$breadcrumb-classic-scrollers">$breadcrumb-classic-scrollers</a> is <code>false</code>.</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$toolbar-scroller-opacity-pressed</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-scroller-right-margin" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-scroller-right-margin" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-scroller-right-margin">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-scroller-right-margin" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-scroller-right-margin" class="member-name">$breadcrumb-scroller-right-margin</span></a>
+
+
+                    <span class="memberType"> : <a href='Number.html'>Number</a> / list</span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The margin of &quot;right&quot; Breadcrumb scroller buttons</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$toolbar-scroller-right-margin</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-scroller-top-margin" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-scroller-top-margin" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-scroller-top-margin">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-scroller-top-margin" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-scroller-top-margin" class="member-name">$breadcrumb-scroller-top-margin</span></a>
+
+
+                    <span class="memberType"> : <a href='Number.html'>Number</a> / list</span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The margin of &quot;top&quot; Breadcrumb scroller buttons</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$toolbar-scroller-top-margin</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-scroller-width" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-scroller-width" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-scroller-width">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-scroller-width" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-scroller-width" class="member-name">$breadcrumb-scroller-width</span></a>
+
+
+                    <span class="memberType"> : <a href='Number.html'>Number</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The width of Breadcrumb scrollers</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$toolbar-scroller-width</pre></p>
+    </div>
+    <div id="css_var-S-$breadcrumb-split-width" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$breadcrumb-split-width" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$breadcrumb-split-width">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$breadcrumb-split-width" class="member-name-link"><span data-ref="css_var-S-$breadcrumb-split-width" class="member-name">$breadcrumb-split-width</span></a>
+
+
+                    <span class="memberType"> : <a href='Number.html'>Number</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The width of breadcrumb arrows when <a href="#cfg-useSplitButtons">useSplitButtons</a> is <code>true</code></p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">$button-small-split-width</pre></p>
+    </div>
+    <div id="css_var-S-$include-breadcrumb-default-ui" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="$include-breadcrumb-default-ui" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss.html#Ext.toolbar.Breadcrumb-css_var-S-$include-breadcrumb-default-ui">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_var-S-$include-breadcrumb-default-ui" class="member-name-link"><span data-ref="css_var-S-$include-breadcrumb-default-ui" class="member-name">$include-breadcrumb-default-ui</span></a>
+
+
+                    <span class="memberType"> : <a href='Boolean.html'>Boolean</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p><code>true</code> to include the &quot;default&quot; breadcrumb UI</p>
+
+            <p class="defaults-to-dec">Defaults to: <pre class="defaults-to-dec">true</pre></p>
+    </div>
+                </div>
+
+                <div id="sass-mixins-ct">
+                    <h2 id="sass-mixins" class="type">theme mixins</h2>
+                    <a name="sass-mixins"></a>
+    <div id="css_mixin-extjs-breadcrumb-ui" class="classmembers member member-public isNotStatic  is-not-inherited       " data-member-name="extjs-breadcrumb-ui" >
+        <div class="collapse-toggle">
+            <i class="fa fa-caret-right"></i>
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="source-class">
+            <a href="Ext.toolbar.Breadcrumb.html">Ext.toolbar.Breadcrumb</a>
+            <div class="viewSource">
+                    <a target="_blank" href="src/Breadcrumb.scss-1.html#Ext.toolbar.Breadcrumb-css_mixin-extjs-breadcrumb-ui">view source</a>
+            </div>
+        </div>
+        <h2 class="member-header">
+            <a href="#css_mixin-extjs-breadcrumb-ui" class="member-name-link"><span data-ref="css_mixin-extjs-breadcrumb-ui" class="member-name">extjs-breadcrumb-ui</span></a>
+                <span class="params-list">
+                    (
+                        ...list...
+
+                    )
+                </span>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Creates a visual theme for a Breadcrumb.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui">$ui</span> :
+                            <span class="memberType">&nbsp;String</span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The name of the UI being created. Can not included spaces or special punctuation
+(used in CSS class names).</p>
+</div>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-button-ui">$ui-button-ui</span> :
+                            <span class="memberType">&nbsp;String</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The name of the button UI that will be used with this breadcrumb UI. Used for overriding
+the button arrows for the given button UI when it is used inside a breadcrumb with this UI.</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-button-ui</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-button-spacing">$ui-button-spacing</span> :
+                            <span class="memberType">&nbsp;Number</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The space between the breadcrumb buttons</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-button-spacing</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-arrow-width">$ui-arrow-width</span> :
+                            <span class="memberType">&nbsp;Number</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The width of the breadcrumb arrows when
+<a href="Ext.toolbar.Breadcrumb.html#cfg-useSplitButtons">Ext.toolbar.Breadcrumb#useSplitButtons</a> is <code>false</code></p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-arrow-width</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-split-width">$ui-split-width</span> :
+                            <span class="memberType">&nbsp;Number</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The width of breadcrumb arrows when <a href="Ext.toolbar.Breadcrumb.html#cfg-useSplitButtons">Ext.toolbar.Breadcrumb#useSplitButtons</a>
+is <code>true</code></p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-split-width</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-include-menu-active-arrow">$ui-include-menu-active-arrow</span> :
+                            <span class="memberType">&nbsp;Boolean</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p><code>true</code> to include a separate background-image for menu arrows when a breadcrumb button&#39;s
+menu is open</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-include-menu-active-arrow</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-folder-icon">$ui-folder-icon</span> :
+                            <span class="memberType">&nbsp;String</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The background-image for the &quot;folder&quot; icon</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-folder-icon</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-folder-open-icon">$ui-folder-open-icon</span> :
+                            <span class="memberType">&nbsp;String</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The background-image for the &quot;open folder&quot; icon</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-folder-open-icon</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-leaf-icon">$ui-leaf-icon</span> :
+                            <span class="memberType">&nbsp;String</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The background-image for the &quot;leaf&quot; icon</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-leaf-icon</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-folder-glyph">$ui-folder-glyph</span> :
+                            <span class="memberType">&nbsp;String/list</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>Glyph for the &quot;folder&quot; icon when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-folder-glyph</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-folder-glyph-color">$ui-folder-glyph-color</span> :
+                            <span class="memberType">&nbsp;color</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The color to use for the &quot;folder&quot; icon when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-folder-glyph-color</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-folder-open-glyph">$ui-folder-open-glyph</span> :
+                            <span class="memberType">&nbsp;String/list</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>Glyph for the &quot;open folder&quot; icon when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-folder-open-glyph</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-folder-open-glyph-color">$ui-folder-open-glyph-color</span> :
+                            <span class="memberType">&nbsp;color</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The color to use for the &quot;open folder&quot; icon when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-folder-open-glyph-color</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-leaf-glyph">$ui-leaf-glyph</span> :
+                            <span class="memberType">&nbsp;String/list</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>Glyph for the &quot;leaf&quot; icon when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-leaf-glyph</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-leaf-glyph-color">$ui-leaf-glyph-color</span> :
+                            <span class="memberType">&nbsp;color</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The color to use for the &quot;leaf&quot; icon when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-leaf-glyph-color</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-arrow-glyph">$ui-arrow-glyph</span> :
+                            <span class="memberType">&nbsp;String/list</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>Glyph for the &quot;arrow&quot; icon when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-arrow-glyph</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-arrow-glyph-color">$ui-arrow-glyph-color</span> :
+                            <span class="memberType">&nbsp;color</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The color to use for the &quot;arrow&quot; icon when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-arrow-glyph-color</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-arrow-expanded-glyph">$ui-arrow-expanded-glyph</span> :
+                            <span class="memberType">&nbsp;String/list</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>Glyph for the &quot;expanded arrow&quot; icon when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-arrow-expanded-glyph</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-arrow-expanded-glyph-color">$ui-arrow-expanded-glyph-color</span> :
+                            <span class="memberType">&nbsp;color</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The color to use for the &quot;expanded arrow&quot; icon when <a href="Global_CSS.html#var-$enable-font-icons">Global_CSS#$enable-font-icons</a> is <code>true</code>.</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-arrow-expanded-glyph-color</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-scroller-width">$ui-scroller-width</span> :
+                            <span class="memberType">&nbsp;Number</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The width of Breadcrumb scrollers</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-scroller-width</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-scroller-height">$ui-scroller-height</span> :
+                            <span class="memberType">&nbsp;Number</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The height of Breadcrumb scrollers</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-scroller-height</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-scroller-border-color">$ui-scroller-border-color</span> :
+                            <span class="memberType">&nbsp;color</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The border-color of Breadcrumb scrollers</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-scroller-border-color</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-scroller-border-width">$ui-scroller-border-width</span> :
+                            <span class="memberType">&nbsp;Number</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The border-width of Breadcrumb scrollers</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-scroller-border-width</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-scroller-top-margin">$ui-scroller-top-margin</span> :
+                            <span class="memberType">&nbsp;Number/list</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The margin of &quot;top&quot; scroller buttons</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-scroller-top-margin</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-scroller-right-margin">$ui-scroller-right-margin</span> :
+                            <span class="memberType">&nbsp;Number/list</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The margin of &quot;right&quot; scroller buttons</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-scroller-right-margin</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-scroller-bottom-margin">$ui-scroller-bottom-margin</span> :
+                            <span class="memberType">&nbsp;Number/list</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The margin of &quot;bottom&quot; scroller buttons</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-scroller-bottom-margin</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-scroller-left-margin">$ui-scroller-left-margin</span> :
+                            <span class="memberType">&nbsp;Number/list</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The margin of &quot;left&quot; scroller buttons</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-scroller-left-margin</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-scroller-cursor">$ui-scroller-cursor</span> :
+                            <span class="memberType">&nbsp;String</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The cursor of Breadcrumb scrollers</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-scroller-cursor</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-scroller-cursor-disabled">$ui-scroller-cursor-disabled</span> :
+                            <span class="memberType">&nbsp;String</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The cursor of disabled Breadcrumb scrollers</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-scroller-cursor-disabled</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-scroller-opacity">$ui-scroller-opacity</span> :
+                            <span class="memberType">&nbsp;Number</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The opacity of Breadcrumb scroller buttons. Only applicable when
+<code>$ui-classic-scrollers</code> is <code>false</code>.</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-scroller-opacity</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-scroller-opacity-over">$ui-scroller-opacity-over</span> :
+                            <span class="memberType">&nbsp;Number</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The opacity of hovered Breadcrumb scroller buttons. Only applicable when
+<code>$ui-classic-scrollers</code> is <code>false</code>.</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-scroller-opacity-over</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-scroller-opacity-pressed">$ui-scroller-opacity-pressed</span> :
+                            <span class="memberType">&nbsp;Number</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The opacity of pressed Breadcrumb scroller buttons. Only applicable when
+<code>$ui-classic-scrollers</code> is <code>false</code>.</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-scroller-opacity-pressed</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-scroller-opacity-disabled">$ui-scroller-opacity-disabled</span> :
+                            <span class="memberType">&nbsp;Number</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The opacity of disabled Breadcrumb scroller buttons.</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-scroller-opacity-disabled</p>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="css_mixin-extjs-breadcrumb-ui--$ui-classic-scrollers">$ui-classic-scrollers</span> :
+                            <span class="memberType">&nbsp;Boolean</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p><code>true</code> to use classic-style scroller buttons.  When <code>true</code> scroller buttons are given
+their hover state by changing their background-position,  When <code>false</code> scroller buttons
+are given their hover state by applying opacity.</p>
+</div>
+                        <p class="defaults-to-dec">Defaults to: $breadcrumb-classic-scrollers</p>
+
+                </div>
+
+    </div>
+                </div>
+
+        </div>
+    </div>
+    <div id="footer">
+        <p class="di">
+            <a href="https://www.facebook.com/senchainc/" target="_blank"><img class="social" src="../../../assets/images/fb.png"/></a>
+            <a href="https://www.linkedin.com/company/sencha-inc" target="_blank"><img class="social" src="../../../assets/images/in.png"/></a>
+            <a href="https://twitter.com/Sencha" target="_blank"><img class="social" src="../../../assets/images/twt.png"/></a>
+            Ext JS   | <a href='https://www.sencha.com/legal/terms-of-use/' target='_blank'>Terms of Use</a>
+        </p>
+    </div>
+</div>        </div>
+    </div>
+
+    <h2 class="product-header">
+        <a href="../index.html">Ext JS 6.0.0 - Classic Toolkit</a>
+        <span data-tip="Product / Version Menu" class="header-product-title product-menu-btn-wrap tooltip tooltip-tl-bl">
+            <span class="fa fa-angle-down product-menu-btn"></span>
+            <div class="callout callout-b"></div>
+        </span>
+        <div id="peekaboo-input" class="peekaboo-input dn">
+            <input type="text" id="mobile-input" />
+        </div>
+    </h2>
+
+    <div id="product-tree-ct" class="hide">
+        <div id="product-version-tree-ct" class="hide"></div>
+    </div>
+
+    <div id="historyConfigPanel">
+        <div class="history-type-selector">
+            <input id="historyTypeCurrent" type="radio" name="historyType" value="current" checked="true" />
+            <label for="historyTypeCurrent">Current Product / Version</label><br>
+            <input id="historyTypeAll" type="radio" name="historyType" value="all" />
+            <label for="historyTypeAll">All</label><br>
+            <div id="history-label-toggle" class="relative ml2 o-50">
+                <input id="history-all-labels" type="checkbox" checked="true" />
+                <label for="history-all-labels">Show product details in the history bar</label>
+                <div class="mask"></div>
+            </div>
+            <span id="history-clear" class="icon-btn history-clear tooltip tooltip-tr-br" data-tip="Clear History">
+                <i class="fa fa-trash"></i>
+                <div class="callout callout-b"></div>
+            </span>
+        </div>
+        <div id="history-full-list" class="overflow-y-auto"></div>
+    </div>
+
+    <div id="search-history-panel"></div>
+
+    <div id="modal-placeholder" class="modal">
+        <span id="modal-close" >&times;</span>
+        <img id="modal-content">
+        <div id="modal-caption"></div>
+    </div>
+
+
+</body>
+    <script type="text/javascript" src="../../../assets/js/extjs-6.0.0-apiSearch.js"></script>
+    <script type="text/javascript" src="../../../assets/js/extjs-6.0.0-guideSearch.js"></script>
+<!--[if lt IE 9 ]>
+<script type="text/javascript" src="../../../assets/js/media-query-poly.js"></script>
+<style>
+    span.da-inline-fiddle-nav-fiddle.x-fa.fa-play-circle {
+        display: none;
+    }
+</style>
+<![endif]-->
+<script>
+    if (navigator.userAgent.indexOf("Safari") > -1) {
+        window.onpageshow = function(event) {
+            if (event.persisted) {
+                window.location.reload()
+            }
+        };
+    }
+</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-1396058-28', 'auto');
+    ga('send', 'pageview');
+</script>
+</html>

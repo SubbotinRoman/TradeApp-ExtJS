@@ -1,0 +1,52 @@
+/* Стили для заголовков окон */
+.x-window-header-title-default {
+    font-size: 16px;                /* Размер шрифта заголовка */
+    color: #157fcc;                 /* Синий цвет текста */
+}
+
+/* Стили для текстовых полей */
+.x-form-text-default {
+    border-color: #b5b8c8;          /* Цвет рамки поля */
+    background-color: #ffffff;       /* Белый фон */
+    border-radius: 3px;             /* Скругление углов */
+}
+
+/* Стили для кнопок по умолчанию */
+.x-btn-default-small {
+    background-color: #157fcc !important;  /* Синий фон */
+    border-color: #157fcc !important;      /* Синяя рамка */
+    border-radius: 0 !important;           /* Убираем скругление углов */
+}
+
+/* Стили для текста кнопок */
+.x-btn-inner-default-small {
+    color: #ffffff !important;       /* Белый цвет текста */
+}
+
+/* Стиль для строк с нулевым количеством товара */
+.zero-quantity {
+    background-color: #ffebee;       /* Светло-красный фон */
+}
+
+/* Стиль для главного заголовка приложения */
+.main-header {
+    background-color: #0288D1;       /* Синий фон */
+}
+
+/* Стиль для прозрачных кнопок в шапке */
+.transparent-button {
+    background-color: rgba(255, 255, 255, 0.2) !important;  /* Полупрозрачный белый фон */
+    border-color: transparent !important;                    /* Прозрачная рамка */
+    color: white !important;                                /* Белый текст */
+}
+
+/* Стили для вкладок */
+.x-tab {
+    background-color: #424242;        /* Темно-серый фон */
+    border: none;                     /* Убираем рамку */
+}
+
+/* Стили для активной вкладки */
+.x-tab-active {
+    background-color: #616161 !important;  /* Более светлый серый фон */
+}

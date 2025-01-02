@@ -1,0 +1,13 @@
+:root .x-panel-header-title-navigation>.x-title-text-navigation:after {
+    content: none;
+}
+.app-table .x-grid-view.x-grid-with-row-lines.x-fit-item.x-grid-view-default{
+    overflow-y: auto !important;
+}
+.app-filters input.x-form-text-default{
+    min-height: 28px;
+}
+.save-confirm ul {
+    list-style-type: none;
+    padding-left: 0;
+}

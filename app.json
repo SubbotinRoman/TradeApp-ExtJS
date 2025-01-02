@@ -1,0 +1,115 @@
+{
+    "name": "products",
+    "namespace": "products",
+    "version": "1.0.0.0",
+    "framework": "ext",
+    "toolkit": "classic",
+    "theme": "theme-triton",
+    "requires": [
+        "font-awesome"
+    ],
+    "classpath": [
+        "app"
+    ],
+    "overrides": [
+        "overrides"
+    ],
+    "sass": {
+        "namespace": "products",
+        "etc": [
+            "sass/etc/all.scss"
+        ],
+        "var": [
+            "sass/var/all.scss",
+            "sass/var"
+        ],
+        "src": [
+            "sass/src"
+        ]
+    },
+    "resources": [
+        {
+            "path": "resources",
+            "output": "shared"
+        }
+    ],
+    "output": {
+        "base": "${workspace.build.dir}/${build.environment}/${app.name}",
+        "page": "index.html",
+        "manifest": "${build.id}.json",
+        "js": "${build.id}/app.js",
+        "appCache": {
+            "enable": false
+        },
+        "resources": {
+            "path": "${build.id}/resources",
+            "shared": "resources"
+        }
+    },
+    "fashion": {
+        "missingParameters": "error",
+        "inliner": {
+            "enable": false
+        }
+    },
+    "js": [
+        {
+            "path": "app.js",
+            "bundle": true
+        }
+    ],
+    "classic": {
+        "css": [
+            {
+                "path": "${build.out.css.path}",
+                "bundle": true,
+                "exclude": ["fashion"]
+            }
+        ],
+        "js": [
+            {
+                "path": "${build.id}/app.js",
+                "bundle": true
+            }
+        ]
+    },
+    "bootstrap": {
+        "base": "${app.dir}",
+        "manifest": "bootstrap.json",
+        "microloader": "bootstrap.js",
+        "css": "bootstrap.css"
+    },
+    "cache": {
+        "enable": false,
+        "deltas": true
+    },
+    "production": {
+        "output": {
+            "appCache": {
+                "enable": true,
+                "path": "cache.appcache"
+            }
+        },
+        "loader": {
+            "cache": "${build.timestamp}"
+        },
+        "cache": {
+            "enable": true
+        },
+        "compress": {
+            "css": true,
+            "js": true
+        }
+    },
+    "testing": {
+    },
+    "development": {
+        "watch": {
+            "delay": 250
+        }
+    },
+    "paths": {
+        "products": "${app.dir}/app"
+    },
+    "id": "e344b7c0-b89a-494b-b534-1f7095288cb3"
+}
