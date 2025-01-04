@@ -40,17 +40,12 @@
 ## Предварительные требования 🔧
 
 ## 1. Установка Sencha CMD
-Скачайте и установите [Sencha CMD](https://www.sencha.com/products/sencha-cmd/)
 
-Для Windows x64:
-```bash
-wget https://cdn.sencha.com/cmd/7.7.0.45/SenchaCmd-7.7.0.45-windows-x64.zip
-```
-
-Распакуйте архив и запустите установщик:
-```bash
-SenchaCmd-7.7.0.45-windows-x64.exe
-```
+1. Скачайте Sencha CMD для Windows 64-bit по этой [ссылке](https://www.sencha.com/products/sencha-cmd/)
+2. После скачивания:
+   - Распакуйте zip архив
+   - Найдите и запустите установщик `SenchaCmd-7.7.0.45-windows-x64.exe`
+   - Следуйте инструкциям установщика
 
 ## 2. Установка ExtJS SDK
 Скачайте [ExtJS SDK](https://www.sencha.com/products/extjs/evaluate/)
