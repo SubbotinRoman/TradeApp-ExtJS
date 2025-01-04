@@ -94,5 +94,3 @@ sencha app watch
 ```
 http://localhost:1841/
 ```
-
----
